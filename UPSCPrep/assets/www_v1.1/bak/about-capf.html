@@ -1,0 +1,266 @@
+<html>
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+ <title></title>
+ <script src="js/jquery.min.js"></script>
+ <script src="js/bootstrap.min.js"></script>
+ <link href="styles/bootstrap.min.css" rel="stylesheet">
+ <link href="styles/simple-sidebar.css" rel="stylesheet"> 
+ <!-- App Body : Core Skeleton -->
+ <link href="styles/core-skeleton.css" rel="stylesheet">
+ <script src="js/core-skeleton.js"></script>
+
+ <script type="text/javascript">
+  $(document).ready(function(){ initOnload(); });
+
+  function initOnload() {
+	initCore();
+   // cursorToAndroid.androidAlert("Launched Initializer");
+  }
+ </script>
+</head>
+<body>
+<!-- Core Skeleton -->
+<!-- Start: -->
+<div id="wrapper" class="toggled">
+	<!-- Core Skeleton : Side and Top Menu -->
+	<div id="sidebar-wrapper">
+				<ul class="sidebar-nav">
+					<li><a href="dashboard.html">Home</a></li>
+					<li><a href="myprofile.html">My Profile</a></li>
+					<li><a href="mybookmark.html">My Bookmarks</a></li>
+					<li><a href="appfeedback.html">App Feedback</a></li>
+					<li><a href="#">Log out</a></li>
+				</ul>
+	</div>
+    <div id="page-content-wrapper">
+			<nav class="navbar navbar-inverse">
+				  <div class="container-fluid">
+					<div class="navbar-header">
+						  <a class="navbar-brand" style="cursor:pointer;" onclick="javascript:sideMenuToggle();">
+							<span class="glyphicon glyphicon-align-justify"></span>
+								&nbsp;
+							<span style="font-size:15px;font-weight:bold;">UPSC # Preparation-Network</span>
+						  </a>
+					</div>
+				 </div>
+			</nav>
+			
+			<div class="searchcontainer">
+				<div class="container-fluid">
+					<form>
+						<input type="text" placeholder="Enter your Search" class="form-control"/>
+					</form>
+				</div>
+			</div>
+			
+			<div class="maintabscontainer">
+				<ul class="nav nav-pills">
+					  <li id="mt_dashboard" data-toggle="tooltip" title="UPSC Dashboard" class="active" onclick="javascript:maintabSelection(this.id)">
+							<a href="dashboard.html">
+								<span class="glyphicon glyphicon-list-alt"></span>
+							</a>
+					  </li>
+					  <li id="mt_courses" data-toggle="tooltip" title="Learning Courses" onclick="javascript:maintabSelection(this.id)">
+							<a href="courses.html">
+								<span class="glyphicon glyphicon-book"></span>
+							</a>
+					  </li>
+					  <li id="mt_notifications" data-toggle="tooltip" title="Notifications" onclick="javascript:maintabSelection(this.id)">
+							<a href="notifications.html">
+								<span class="glyphicon glyphicon-globe"></span>
+							</a>
+					  </li>
+					  <li id="mt_calendar" data-toggle="tooltip" title="UPSC Examination Calendar"  onclick="javascript:maintabSelection(this.id)">
+						<a href="calendar.html">
+							<span class="glyphicon glyphicon-calendar"></span>
+						</a>
+					  </li>
+					  <li id="mt_discussion" data-toggle="tooltip" title="Discussion" onclick="javascript:maintabSelection(this.id)">
+							<a href="discussion.html">
+								<span class="glyphicon glyphicon-thumbs-up"></span>
+							</a>
+					  </li>
+					  <li id="mt_people"  data-toggle="tooltip" title="People" onclick="javascript:maintabSelection(this.id)">
+							<a href="people.html">
+								<span class="glyphicon glyphicon-user"></span>
+							</a>
+					  </li>
+				</ul>
+			</div>
+			
+			<!-- Core Page Body -->
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+					
+						<div class="container-fluid mtop15p mbot5p">
+							<div align="center" class="col-md-4">
+								<button class="btn btn-primary form-control mbot15p">
+									<b>GO TO DISCUSSION</b>
+								</button>
+							</div>
+							<div align="center" class="col-md-4">
+								<a href="syllabus-capf.html">
+									<button class="btn btn-primary form-control mbot15p">
+										<b>VIEW SYLLABUS</b>
+									</button>
+								</a>
+							</div>
+							<div align="center" class="col-md-4">
+								<button class="btn btn-primary form-control mbot15p">
+									<b>GO TO MY COURSE</b>
+								</button>
+							</div>
+						</div>
+						
+						<div class="mtop5p">
+						   <h4 align="center"><b>CENTRAL ARMED POLICE FORCES (Assistant Commandants) EXAMINATION</b></h4>
+
+						      <h5><b>About Exam</b></h5><br/>
+						      Central Armed Police Forces (Assistant Commandants) exam is going to be conducted by Union Public Service Commission (UPSC)
+							  for recruiting candidates as Assistant Commandants (Group A) in the Central Armed Police Forces (CAPF) such as Central 
+							  Reserve Police Force (CRPF), Border Security Force (BSF), Sashastra Seema Bal (SSB) and Indo-Tibetan Border Police (ITBP).
+							  <br/><br/>
+							  <h5><b>Eligibility</b></h5><br/>
+							   <div class="table-responsive">          
+									  <table class="table">
+										<thead>
+										  <tr>
+											<th>#Category</th>
+											<th>#Details</th>
+										  </tr>
+										</thead>
+										<tbody>
+										  <tr>
+											<td>Nationality</td>
+											<td>
+											   A candidate must be either a citizen of India (or) subject of Nepal (or) subject of Bhutan.
+											   <br/>
+											   <b><u>Note:</u> No person who is not a citizen of India shall, except with the consent of the Central 
+											   Government signified in writing be appointed or employed under these Rules.</b>
+											   <br/>
+											   Provided that nothing contained in these rules shall debar the appointment, enrolment or 
+											   employment of a subject of Nepal or Bhutan under these Rules.
+											</td>
+										  </tr>
+										  <tr>
+											<td>Sex</td>
+											<td>Both Male and Female candidates are eligible for appointment to the post of Assistant Commandants.</td>
+										  </tr>
+										  <tr>
+											<td>Age Limit</td>
+											<td>A candidate must have attained the age of 20 years and must not have attained the age of 25 years on the day of Exam.</td>
+										  </tr>
+										  <tr>
+											<td>Age Relaxation</td>
+											<td>
+											The upper age limit prescribed above will be relaxable<br/>
+											<ul>
+												<li>up to a maximum of five years if a candidate belongs to a Scheduled Caste or a Scheduled Tribe</li>
+												<li>up to a maximum of three years in the case of candidates belonging to Other Backward Classes who are eligible to avail of reservation applicable to such candidates</li>
+												<li>up to a maximum of five years for Civilian Central Government Servants in accordance with the existing instructions of the Central Government. Ex-Servicemen will also be eligible for this relaxation. However the total relaxation claimed on account of Government Service will be limited to five years</li>
+												<li>up to a maximum of five years if a candidate had ordinarily been domiciled in the State of Jammu & Kashmir during the period from 1st January, 1980 to the 31st day of December, 1989.</li>
+											</ul>
+											</td>
+										  </tr>
+										  <tr>
+											<td>Minimum Educational Qualifications</td>
+											<td>
+												A candidate must hold a Bachelor’s degree of a University incorporated by an Act of the Central or State 
+												Legislature in India or other educational institutions established by an Act of Parliament or declared 
+												to be deemed as a University under Section-3 of the University Grants Commission Act, 1956 or possess 
+												an equivalent qualification.
+											</td>
+										  </tr>
+										  <tr>
+											<td>Restriction on re-appearance of candidates</td>
+											<td>
+											A candidate who has been finally selected on the basis of an earlier examination to the post of Assistant Commandants 
+											in any of the forces participating in the Central Armed Police Forces (Assistant Commandants) Examination will not be
+											eligible to appear at a subsequent examination for recruitment of Assistant Commandants in the participating CAPFs.
+											</td>
+										  </tr>
+										  <tr>
+											<td>Physical Tests</td>
+											<td>
+												<ul>
+													<li>
+													Candidates who are declared qualified in the written examination will be summoned for 
+													Physical Standards/ Physical Efficiency Tests and Medical Standards Tests.
+													</li>
+												</ul>
+												All the candidates who meet the prescribed Physical Standards as indicated below will be put
+												through the Physical Efficiency Tests.
+													<div class="table-responsive">          
+														  <table class="table">
+															<thead>
+															  <tr>
+															    <th>Measurement</th>
+																<th>For Males</th>
+																<th>For Females</th>
+															  </tr>
+															</thead>
+															<tbody>
+															  <tr>
+																<th>100 meters race</th>
+																<th>In 16 seconds</th>
+																<th>In 18 seconds</th>
+															  </tr>
+															  <tr>
+																<th>800 meters race</th>
+																<th>In 3 minutes 45 seconds</th>
+																<th>In 4 minutes 45 seconds</th>
+															  </tr>
+															  <tr>
+																<th>Long Jump</th>
+																<th>3.5 Meters (3 chances)</th>
+																<th>3.0 meters (3 chances)</th>
+															  </tr>
+															  <tr>
+																<th>Shot Put (7.26 Kgs.)</th>
+																<th>4.5 Meters</th>
+																<th>---</th>
+															  </tr>
+															</tbody>
+														  </table>
+													</div>
+											</td>
+										  </tr>
+										</tbody>
+									  </table>
+								</div>
+								
+						</div>	
+						
+						<div class="container-fluid mbot15p">
+							<div align="center" class="col-md-4">
+								<button class="btn btn-primary form-control mbot15p">
+									<b>GO TO DISCUSSION</b>
+								</button>
+							</div>
+							<div align="center" class="col-md-4">
+								<a href="syllabus-capf.html">
+									<button class="btn btn-primary form-control mbot15p">
+										<b>VIEW SYLLABUS</b>
+									</button>
+								</a>
+							</div>
+							<div align="center" class="col-md-4">
+								<button class="btn btn-primary form-control mbot15p">
+									<b>GO TO MY COURSE</b>
+								</button>
+							</div>
+						</div>
+						   
+                    </div>
+                </div>
+            </div>
+			
+        </div>
+ 
+</div>
+<!-- End: -->
+</body>
+</html>

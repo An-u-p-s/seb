@@ -1,0 +1,98 @@
+<html>
+<head>
+ <script src="js/jquery-1.9.1.min.js"></script>
+ <script src="js/bootstrap.min.js"></script>
+ <link href="styles/bootstrap.min.css" rel="stylesheet">
+ <link href="styles/simple-sidebar.css" rel="stylesheet"> 
+ <!-- App Body : Core Skeleton -->
+ <link href="styles/core-skeleton.css" rel="stylesheet">
+ <script src="js/core-skeleton.js"></script>		
+ <style>
+ body { overflow-y:hidden;over-flow-x:hidden; }
+ #website { width:100%; }    
+ </style>
+ <script type="text/javascript">
+  $(document).ready(function(){ 
+   initCore();
+   weblayout();
+  });
+
+  function weblayout() {  /* Set Height as per */
+    var wHeight=window.innerHeight;
+    var webHeight=wHeight-120;
+    document.getElementById("website").style.height=webHeight+'px';
+  }
+  
+  function iframeSource(id, url) {
+   menuSelector(id);
+   document.getElementById("website").src=url;
+  }
+  
+  function menuSelector(id) {
+    var arr_web=["ClearIAS","clearIASexam","Mrunal","gktoday","insightsonindia","visionias","IASexamportal","swapsushias",
+	"iaspassion","iasscore","iaskracker","jagranjosh","UPSCguide","CivilServiceIndia","ias100",
+	"civilsdaily","onlinegk","iasaspirants","iasexams","tcyonline","testfunda","byjusclasses"];
+	for(var index=0;index<arr_web.length;index++) {
+		if(arr_web[index]===id) { $('#'+arr_web[index]).addClass('active'); }
+		else { $('#'+arr_web[index]).removeClass('active'); }
+	}
+	 initCore();
+  }
+  </script>
+</head>
+<body> 
+<div id="wrapper" class="toggled">
+	<!-- Core Skeleton : Side and Top Menu -->
+	<div id="sidebar-wrapper">
+		<ul class="sidebar-nav">
+		    <li><b>WEBSITES:</b<></li>
+		    <li><a href="#" id="ClearIAS" class="active" onclick="javascript:iframeSource('ClearIAS','http://www.clearias.com/');">ClearIAS.com</a></li>
+			<li><a href="#" id="clearIASexam" onclick="javascript:iframeSource('clearIASexam','https://www.cleariasexam.com/');">clearIASexam.com</a></li>
+			<li><a href="#" id="Mrunal" onclick="javascript:iframeSource('Mrunal','http://mrunal.org/');">Mrunal.org</a></li>
+			<li><a href="#" id="gktoday" onclick="javascript:iframeSource('gktoday','http://www.gktoday.in/');">gktoday.in</a></li>
+			<li><a href="#" id="insightsonindia" onclick="javascript:iframeSource('insightsonindia','http://www.insightsonindia.com/');">insightsonindia.com</a></li>
+			<li><a href="#" id="visionias" onclick="javascript:iframeSource('visionias','https://visionias.wordpress.com/');">visionias.wordpress.com</a></li>
+			<li><a href="#" id="IASexamportal" onclick="javascript:iframeSource('IASexamportal','http://iasexamportal.com/civilservices/');">IASexamportal.com</a></li>
+			<li><a href="#" id="swapsushias" onclick="javascript:iframeSource('swapsushias','http://swapsushias.blogspot.in/');">swapsushias.blogspot.in</a></li>
+			<li><a href="#" id="iaspassion" onclick="javascript:iframeSource('iaspassion','http://www.iaspassion.com/');">iaspassion.com</a></li>
+			<li><a href="#" id="iasscore" onclick="javascript:iframeSource('iasscore','http://iasscore.in/');">iasscore.in</a></li>
+			<li><a href="#" id="iaskracker" onclick="javascript:iframeSource('iaskracker','https://iaskracker.com/');">iaskracker.com</a></li>
+			<li><a href="#" id="jagranjosh" onclick="javascript:iframeSource('jagranjosh','http://www.jagranjosh.com/');">jagranjosh.com </a></li>
+			<li><a href="#" id="UPSCguide" onclick="javascript:iframeSource('UPSCguide','http://upscguide.com/');">UPSCguide.com </a></li>
+			<li><a href="#" id="CivilServiceIndia" onclick="javascript:iframeSource('CivilServiceIndia','http://civilserviceindia.com/');">CivilServiceIndia.com </a></li>
+			<li><a href="#" id="ias100" onclick="javascript:iframeSource('ias100','http://www.ias100.in/');">ias100.in </a></li>
+			<li><a href="#" id="civilsdaily" onclick="javascript:iframeSource('civilsdaily','http://www.civilsdaily.com/');">civilsdaily.com</a></li>
+			<li><a href="#" id="onlinegk" onclick="javascript:iframeSource('onlinegk','https://www.onlinegk.com/');">onlinegk.com</a></li>
+			<li><a href="#" id="iasaspirants" onclick="javascript:iframeSource('iasaspirants','http://iasaspirants.com/');">iasaspirants.com</a></li>
+			<li><a href="#" id="iasexams" onclick="javascript:iframeSource('iasexams','http://iasexams.facts.co/civilservicesexam.php');">iasexams.com</a></li>
+			<li><a href="#" id="tcyonline" onclick="javascript:iframeSource('tcyonline','https://www.tcyonline.com/');">tcyonline.com</a></li>
+			<li><a href="#" id="testfunda" onclick="javascript:iframeSource('testfunda','http://testfunda.com/');">testfunda.com</a></li>
+			<li><a href="#" id="byjusclasses" onclick="javascript:iframeSource('byjusclasses','https://byjus.com/');">byjusclasses.com</a></li>
+		</ul>
+	</div>
+    <div id="page-content-wrapper">
+			<nav class="navbar">
+				    <div id="applogo-header"  onclick="javascript:sideMenuToggle();">
+						<a class="navbar-brand a-custom" style="cursor:pointer;">
+							<span class="glyphicon glyphicon-align-justify"></span>
+						</a>
+						<img src="images/logo.jpg" class="app_logo"/>
+				    </div>
+					<div id="dashboard-header-tabs" class="dashboard-header">
+						
+					</div>
+			</nav>
+			<div id="app-page-content">
+				<iframe src="http://www.clearias.com/" id="website"></iframe>
+			    
+			<footer>
+				<div align="center" >
+					<img class="anups-logo" src="images/anups-logo.jpg"/>
+				 </div>
+			</footer>
+			</div>
+			
+	</div>
+</div>
+</body>
+</html>

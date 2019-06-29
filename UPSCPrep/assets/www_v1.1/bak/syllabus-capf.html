@@ -1,0 +1,281 @@
+<html>
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+ <title></title>
+ <script src="js/jquery.min.js"></script>
+ <script src="js/bootstrap.min.js"></script>
+ <link href="styles/bootstrap.min.css" rel="stylesheet">
+ <link href="styles/simple-sidebar.css" rel="stylesheet"> 
+ <!-- App Body : Core Skeleton -->
+ <link href="styles/core-skeleton.css" rel="stylesheet">
+ <script src="js/core-skeleton.js"></script>
+
+ <script type="text/javascript">
+  $(document).ready(function(){ initOnload(); });
+
+  function initOnload() {
+	initCore();
+   // cursorToAndroid.androidAlert("Launched Initializer");
+  }
+ </script>
+</head>
+<body>
+<!-- Core Skeleton -->
+<!-- Start: -->
+<div id="wrapper" class="toggled">
+	<!-- Core Skeleton : Side and Top Menu -->
+	<div id="sidebar-wrapper">
+				<ul class="sidebar-nav">
+					<li><a href="dashboard.html">Home</a></li>
+					<li><a href="myprofile.html">My Profile</a></li>
+					<li><a href="mybookmark.html">My Bookmarks</a></li>
+					<li><a href="appfeedback.html">App Feedback</a></li>
+					<li><a href="#">Log out</a></li>
+				</ul>
+	</div>
+    <div id="page-content-wrapper">
+			<nav class="navbar navbar-inverse">
+				  <div class="container-fluid">
+					<div class="navbar-header">
+						  <a class="navbar-brand" style="cursor:pointer;" onclick="javascript:sideMenuToggle();">
+							<span class="glyphicon glyphicon-align-justify"></span>
+								&nbsp;
+							<span style="font-size:15px;font-weight:bold;">UPSC # Preparation-Network</span>
+						  </a>
+					</div>
+				 </div>
+			</nav>
+			
+			<div class="searchcontainer">
+				<div class="container-fluid">
+					<form>
+						<input type="text" placeholder="Enter your Search" class="form-control"/>
+					</form>
+				</div>
+			</div>
+			
+			<div class="maintabscontainer">
+				<ul class="nav nav-pills">
+					  <li id="mt_dashboard" data-toggle="tooltip" title="UPSC Dashboard" class="active" onclick="javascript:maintabSelection(this.id)">
+							<a href="dashboard.html">
+								<span class="glyphicon glyphicon-list-alt"></span>
+							</a>
+					  </li>
+					  <li id="mt_courses" data-toggle="tooltip" title="Learning Courses" onclick="javascript:maintabSelection(this.id)">
+							<a href="courses.html">
+								<span class="glyphicon glyphicon-book"></span>
+							</a>
+					  </li>
+					  <li id="mt_notifications" data-toggle="tooltip" title="Notifications" onclick="javascript:maintabSelection(this.id)">
+							<a href="notifications.html">
+								<span class="glyphicon glyphicon-globe"></span>
+							</a>
+					  </li>
+					  <li id="mt_calendar" data-toggle="tooltip" title="UPSC Examination Calendar"  onclick="javascript:maintabSelection(this.id)">
+						<a href="calendar.html">
+							<span class="glyphicon glyphicon-calendar"></span>
+						</a>
+					  </li>
+					  <li id="mt_discussion" data-toggle="tooltip" title="Discussion" onclick="javascript:maintabSelection(this.id)">
+							<a href="discussion.html">
+								<span class="glyphicon glyphicon-thumbs-up"></span>
+							</a>
+					  </li>
+					  <li id="mt_people"  data-toggle="tooltip" title="People" onclick="javascript:maintabSelection(this.id)">
+							<a href="people.html">
+								<span class="glyphicon glyphicon-user"></span>
+							</a>
+					  </li>
+				</ul>
+			</div>
+			
+			<!-- Core Page Body -->
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+						<!-- -->
+						
+						<div class="container-fluid mtop15p mbot5p">
+							<div align="center" class="col-md-4">
+								<button class="btn btn-primary form-control mbot15p">
+									<b>GO TO DISCUSSION</b>
+								</button>
+							</div>
+							<div align="center" class="col-md-4">
+								<a href="about-capf.html">
+									<button class="btn btn-primary form-control mbot15p">
+										<b>ABOUT CAPF</b>
+									</button>
+								</a>
+							</div>
+							<div align="center" class="col-md-4">
+								<button class="btn btn-primary form-control mbot15p">
+									<b>GO TO MY COURSE</b>
+								</button>
+							</div>
+						</div>
+						
+						<div class="container-fluid">
+							<h4 align="center"><b>CAPF SYLLABUS</b></h4>
+						    <h4>Exam Pattern 2017</h4>
+							<div class="table-responsive">
+								<table class="table">
+									<thead>
+										<tr>
+											<td>Paper</td>
+											<td>Subject</td>
+											<td>Type</td>
+											<td>Questions</td>
+											<td>Marks</td>
+											<td>Duration</td>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Paper 1</td>
+											<td>General Ability and Intelligence</td>
+											<td>Objective</td>
+											<td>125</td>
+											<td>250</td>
+											<td>2 Hours</td>
+										</tr>
+										<tr>
+											<td>Paper 2</td>
+											<td>General Studies, Essay & Comprehension</td>
+											<td>Conventional</td>
+											<td></td>
+											<td>200</td>
+											<td>3 Hours</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							
+							<div  class="mbot15p">
+									There is negative marking in Objective Type Question Paper. 
+									Physical and medical standards test will be conducted only for those candidates who qualify the 
+									written examination. Interview for personal test will be of 200 marks.
+							</div>
+							
+							<div class="mtop15p mbot15p">
+								<h4 align="center"><b>CAPF General Ability and Intelligence Syllabus</b></h4>
+								<div>
+									This paper contains objective type questions with multiple choices. This paper broadly covers following areas:
+									<h5><b>1. General Mental Ability</b></h5>
+									The questions will be designed to test the logical reasoning, quantitative aptitude including numerical ability, 
+									and data interpretation.
+									<h5><b>2. General Science</b></h5>
+									The questions will be set to test general awareness, scientific temper, comprehension and appreciation of scientific
+									phenomena of everyday observation including new areas of importance like Information Technology, Biotechnology, 
+									Environmental Science.
+									<h5><b>3. Current Events of National and International Importance</b></h5>
+									The questions will test your awareness of current events of national and international importance in the broad 
+									areas of culture, music, arts, literature, sports, governance, societal and developmental issues, industry, business, 
+									globalization, and interplay among nations.
+									<h5><b>4. Indian Polity and Economy</b></h5>
+									The questions aim to test your knowledge of India's political system and the Constitution of India, social systems and 
+									public administration, economic development in India, regional and international security issues and human rights 
+									including its indicators.
+									<h5><b>5. History of India</b></h5>
+									The questions will broadly cover the subject in its social, economic and political aspects. 
+									This will also include the areas of growth of nationalism and freedom movement.
+									<h5><b>6. Indian and World Geography</b></h5>
+									The questions will cover the physical, social and economic aspects of geography pertaining to India and the World.
+								</div>
+								<h4 align="center"><b>CPF General Studies, Essay and Comprehension</b></h4>
+								<div>
+									This paper contains two parts - A and B. The exam is of 200 marks and the duration of the paper is 3 hours. 
+									<h5><b>Part-A</b></h5>
+									Essay questions which are to be answered in long narrative form either in Hindi or English totaling 80 marks. 
+									The indicative topics are modern Indian history especially of the freedom struggle, geography, polity and economy, 
+									knowledge of security and human rights issues, and analytical ability.
+									<h5><b>Part-B</b></h5>
+									Comprehension, précis writing, other communications and language skills. The paper is to be attempted in English only (marks 120).
+									The topics are Comprehension passages, précis writing, developing counter arguments, simple grammar and other aspects of language 
+									testing.
+									<h5><b>Break-up of Paper</b></h5>
+									<div class="table-responsive">
+										<table class="table">
+											<thead>
+												<tr>
+													<td>Topic</td>
+													<td>Questions</td>
+													<td>Marks</td>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Essay Question in 800 words</td>
+													<td>One</td>
+													<td>80</td>
+												</tr>
+												<tr>
+													<td>Precis Writing</td>
+													<td>Two</td>
+													<td>30</td>
+												</tr>
+												<tr>
+													<td>Comprehension Passage</td>
+													<td>Two</td>
+													<td>40</td>
+												</tr>
+												<tr>
+													<td>Counter Argument</td>
+													<td>Two</td>
+													<td>10</td>
+												</tr>
+												<tr>
+													<td>Report Writing</td>
+													<td>One</td>
+													<td>20</td>
+												</tr>
+												<tr>
+													<td>Other Grammar Questions</td>
+													<td></td>
+													<td>20</td>
+												</tr>
+												<tr>
+													<td>Total Marks</td>
+													<td></td>
+													<td>200</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						
+						<div class="container-fluid mtop15p mbot5p">
+							<div align="center" class="col-md-4">
+								<button class="btn btn-primary form-control mbot15p">
+									<b>GO TO DISCUSSION</b>
+								</button>
+							</div>
+							<div align="center" class="col-md-4">
+								<a href="about-capf.html">
+									<button class="btn btn-primary form-control mbot15p">
+										<b>ABOUT CAPF</b>
+									</button>
+								</a>
+							</div>
+							<div align="center" class="col-md-4">
+								<button class="btn btn-primary form-control mbot15p">
+									<b>GO TO MY COURSE</b>
+								</button>
+							</div>
+						</div>
+						
+						
+                    </div>
+                </div>
+            </div>
+			
+        </div>
+ 
+</div>
+<!-- End: -->
+</body>
+</html>

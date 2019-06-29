@@ -1,0 +1,133 @@
+<html>
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+ <title></title>
+ <script src="../../js/jquery.min.js"></script>
+ <script src="../../js/jstree.min.js"></script>
+ <script src="../../js/bootstrap.min.js"></script>
+ <link href="../../styles/bootstrap.min.css" rel="stylesheet">
+ <link href="../../styles/simple-sidebar.css" rel="stylesheet"> 
+ <link href="../../styles/jstree.css" rel="stylesheet">
+ <script type="text/javascript">
+  $(document).ready(function(){
+    initOnload();
+	
+  });
+  function initOnload() {
+    $("#jstree").jstree();
+	$("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+  }
+ </script>
+</head>
+<body>
+<div id="wrapper" class="toggled">
+		<!-- Sidebar -->
+        <div id="sidebar-wrapper">
+			<div id="jstree">
+				<ul>
+				   <li data-jstree='{"icon":"glyphicon glyphicon-folder-open"}'>Geomorphology
+						<ul>
+							<li data-jstree='{"icon":"glyphicon glyphicon-file"}'>Factors controlling landform development</li>
+							<li data-jstree='{"icon":"glyphicon glyphicon-file"}'>Endogenetic and Exogenetic Forces</li>
+							<li data-jstree='{"icon":"glyphicon glyphicon-file"}'>Origin and Evolution of the Earth's crust</li>
+							<li data-jstree='{"icon":"glyphicon glyphicon-file"}'>Fundamentals of geomagnetism</li>
+							<li data-jstree='{"icon":"glyphicon glyphicon-file"}'>Physical conditions of the earth’s interior</li>
+							<li data-jstree='{"icon":"glyphicon glyphicon-file"}'>Geosynclines</li>
+						    <li data-jstree='{"icon":"glyphicon glyphicon-file"}'>Continental drift</li>
+							<li data-jstree='{"icon":"glyphicon glyphicon-file"}'>Isostasy</li>
+							<li data-jstree='{"icon":"glyphicon glyphicon-file"}'>Plate tectonics</li>
+							<li data-jstree='{"icon":"glyphicon glyphicon-file"}'>Recent views on mountain building</li>
+							<li data-jstree='{"icon":"glyphicon glyphicon-file"}'>Vulcanicity</li>
+							<li data-jstree='{"icon":"glyphicon glyphicon-file"}'>Earthquakes and Tsunamis</li>
+							<li data-jstree='{"icon":"glyphicon glyphicon-file"}'>Concepts of geomorphic cycles and Landscape development</li>
+							<li data-jstree='{"icon":"glyphicon glyphicon-file"}'>Denudation chronology</li>
+							<li data-jstree='{"icon":"glyphicon glyphicon-file"}'>Channel morphology</li>
+						    <li data-jstree='{"icon":"glyphicon glyphicon-file"}'>Erosion surfaces</li>
+							<li data-jstree='{"icon":"glyphicon glyphicon-file"}'>Slope development</li>
+							<li data-jstree='{"icon":"glyphicon glyphicon-file"}'>Applied Geomorphology : Geohydrology, economic geology and environment</li>
+
+						</ul>	
+				   </li>	
+				   </li>
+				   <li data-jstree='{"icon":"glyphicon glyphicon-folder-open"}'>Climatology
+						<ul>
+							<li data-jstree='{"icon":"glyphicon glyphicon-file"}'>Temperature and pressure belts of the world; Heat budget of the earth</li>
+							<li data-jstree='{"icon":"glyphicon glyphicon-file"}'>Atmospheric circulation</li>
+							<li data-jstree='{"icon":"glyphicon glyphicon-file"}'>Atmospheric stability and instability</li>
+							<li data-jstree='{"icon":"glyphicon glyphicon-file"}'>Planetary and local winds</li>
+							<li data-jstree='{"icon":"glyphicon glyphicon-file"}'>Monsoons and jet streams</li>
+							<li data-jstree='{"icon":"glyphicon glyphicon-file"}'>Air masses and fronto genesis</li>
+							<li data-jstree='{"icon":"glyphicon glyphicon-file"}'>Temperate and tropical cyclones</li>
+							<li data-jstree='{"icon":"glyphicon glyphicon-file"}'>Types and distribution of precipitation</li>
+							<li data-jstree='{"icon":"glyphicon glyphicon-file"}'>Weather and Climate</li>
+							<li data-jstree='{"icon":"glyphicon glyphicon-file"}'>Koppen’s, Thornthwaite’s and Trewartha’s classification of world climates</li>
+							<li data-jstree='{"icon":"glyphicon glyphicon-file"}'>Hydrological cycle</li>
+							<li data-jstree='{"icon":"glyphicon glyphicon-file"}'>Global climatic change and role and response of man in climatic changes, Applied climatology and Urban climate</li>
+						</ul>
+				   </li>
+				   
+				   <li data-jstree='{"icon":"glyphicon glyphicon-folder-open"}'>Oceanography
+						<ul>
+							<li data-jstree='{"icon":"glyphicon glyphicon-file"}'>Bottom topography of the Atlantic, Indian and Pacific Oceans</li>
+							<li data-jstree='{"icon":"glyphicon glyphicon-file"}'>Temperature and salinity of the oceans</li>
+							<li data-jstree='{"icon":"glyphicon glyphicon-file"}'>Heat and salt budgets, Ocean deposits</li>
+							<li data-jstree='{"icon":"glyphicon glyphicon-file"}'>Waves, currents and tides</li>
+							<li data-jstree='{"icon":"glyphicon glyphicon-file"}'>Marine resources: biotic, mineral and energy resources</li>
+							<li data-jstree='{"icon":"glyphicon glyphicon-file"}'>Coral reefs, coral bleaching; sealevel changes; law of the sea and marine pollution</li>
+						</ul>
+				   </li>
+				   <li data-jstree='{"icon":"glyphicon glyphicon-folder-open"}'>Biogeography
+						<ul>
+							<li data-jstree='{"icon":"glyphicon glyphicon-file"}'>Genesis of soils</li>
+							<li data-jstree='{"icon":"glyphicon glyphicon-file"}'>Classification and distribution of soils</li>
+							<li data-jstree='{"icon":"glyphicon glyphicon-file"}'>Soil profile</li>
+							<li data-jstree='{"icon":"glyphicon glyphicon-file"}'>Soil erosion, Degradation and conservation</li>
+							<li data-jstree='{"icon":"glyphicon glyphicon-file"}'>Factors influencing world distribution of plants and animals</li>
+							<li data-jstree='{"icon":"glyphicon glyphicon-file"}'>Problems of deforestation and conservation measures</li>
+							<li data-jstree='{"icon":"glyphicon glyphicon-file"}'>Social forestrys</li>
+							<li data-jstree='{"icon":"glyphicon glyphicon-file"}'>Agro-forestry; Wild life</li>
+							<li data-jstree='{"icon":"glyphicon glyphicon-file"}'>Major gene pool centres</li>
+						</ul>
+				   </li>
+				   <li data-jstree='{"icon":"glyphicon glyphicon-folder-open"}'>Environmental Geography
+						<ul>
+							<li data-jstree='{"icon":"glyphicon glyphicon-file"}'>Principle of ecology</li>
+							<li data-jstree='{"icon":"glyphicon glyphicon-file"}'>Human ecological adaptations</li>
+							<li data-jstree='{"icon":"glyphicon glyphicon-file"}'>Influence of man on ecology and environment</li>
+							<li data-jstree='{"icon":"glyphicon glyphicon-file"}'>Global and regional ecological changes and imbalances</li>
+							<li data-jstree='{"icon":"glyphicon glyphicon-file"}'>Ecosystem their management and conservation</li>
+							<li data-jstree='{"icon":"glyphicon glyphicon-file"}'>Environmental degradation, management and conservation</li>
+							<li data-jstree='{"icon":"glyphicon glyphicon-file"}'>Biodiversity and sustainable development</li>
+							<li data-jstree='{"icon":"glyphicon glyphicon-file"}'>Environmental policy</li>
+							<li data-jstree='{"icon":"glyphicon glyphicon-file"}'>Environmental hazards and remedial measures</li>
+							<li data-jstree='{"icon":"glyphicon glyphicon-file"}'>Environmental education and legislation</li>
+						</ul>
+				   </li>
+				</ul>
+			</div>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1>Simple Sidebar</h1>
+                        <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the page content will be pushed off canvas.</p>
+                        <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
+                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+</body>
+</html>
