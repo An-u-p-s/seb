@@ -1,0 +1,294 @@
+<html>
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+ <title></title>
+ <script src="js/jquery.min.js"></script>
+ <script src="js/bootstrap.min.js"></script>
+ <link href="styles/bootstrap.min.css" rel="stylesheet">
+ <link href="styles/simple-sidebar.css" rel="stylesheet"> 
+ <!-- App Body : Core Skeleton -->
+ <link href="styles/core-skeleton.css" rel="stylesheet">
+ <script src="js/core-skeleton.js"></script>
+
+ <script type="text/javascript">
+  $(document).ready(function(){ initOnload(); });
+
+  function initOnload() {
+	initCore();
+   // cursorToAndroid.androidAlert("Launched Initializer");
+  }
+ </script>
+</head>
+<body>
+<!-- Core Skeleton -->
+<!-- Start: -->
+<div id="wrapper" class="toggled">
+	<!-- Core Skeleton : Side and Top Menu -->
+	<div id="sidebar-wrapper">
+				<ul class="sidebar-nav">
+					<li><a href="dashboard.html">Home</a></li>
+					<li><a href="myprofile.html">My Profile</a></li>
+					<li><a href="mybookmark.html">My Bookmarks</a></li>
+					<li><a href="appfeedback.html">App Feedback</a></li>
+					<li><a href="#">Log out</a></li>
+				</ul>
+	</div>
+    <div id="page-content-wrapper">
+			<nav class="navbar navbar-inverse">
+				  <div class="container-fluid">
+					<div class="navbar-header">
+						  <a class="navbar-brand" style="cursor:pointer;" onclick="javascript:sideMenuToggle();">
+							<span class="glyphicon glyphicon-align-justify"></span>
+								&nbsp;
+							<span style="font-size:15px;font-weight:bold;">UPSC # Preparation-Network</span>
+						  </a>
+					</div>
+				 </div>
+			</nav>
+			
+			<div class="searchcontainer">
+				<div class="container-fluid">
+					<form>
+						<input type="text" placeholder="Enter your Search" class="form-control"/>
+					</form>
+				</div>
+			</div>
+			
+			<div class="maintabscontainer">
+				<ul class="nav nav-pills">
+					  <li id="mt_dashboard" data-toggle="tooltip" title="UPSC Dashboard" class="active" onclick="javascript:maintabSelection(this.id)">
+							<a href="dashboard.html">
+								<span class="glyphicon glyphicon-list-alt"></span>
+							</a>
+					  </li>
+					  <li id="mt_courses" data-toggle="tooltip" title="Learning Courses" onclick="javascript:maintabSelection(this.id)">
+							<a href="courses.html">
+								<span class="glyphicon glyphicon-book"></span>
+							</a>
+					  </li>
+					  <li id="mt_notifications" data-toggle="tooltip" title="Notifications" onclick="javascript:maintabSelection(this.id)">
+							<a href="notifications.html">
+								<span class="glyphicon glyphicon-globe"></span>
+							</a>
+					  </li>
+					  <li id="mt_calendar" data-toggle="tooltip" title="UPSC Examination Calendar"  onclick="javascript:maintabSelection(this.id)">
+						<a href="calendar.html">
+							<span class="glyphicon glyphicon-calendar"></span>
+						</a>
+					  </li>
+					  <li id="mt_discussion" data-toggle="tooltip" title="Discussion" onclick="javascript:maintabSelection(this.id)">
+							<a href="discussion.html">
+								<span class="glyphicon glyphicon-thumbs-up"></span>
+							</a>
+					  </li>
+					  <li id="mt_people"  data-toggle="tooltip" title="People" onclick="javascript:maintabSelection(this.id)">
+							<a href="people.html">
+								<span class="glyphicon glyphicon-user"></span>
+							</a>
+					  </li>
+				</ul>
+			</div>
+			
+			<!-- Core Page Body -->
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+					
+						<div class="container-fluid mtop15p mbot5p">
+							<div align="center" class="col-md-4">
+								<button class="btn btn-primary form-control mbot15p">
+									<b>GO TO DISCUSSION</b>
+								</button>
+							</div>
+							<div align="center" class="col-md-4">
+								<a href="syllabus-ies.html">
+									<button class="btn btn-primary form-control mbot15p">
+										<b>VIEW SYLLABUS</b>
+									</button>
+								</a>
+							</div>
+							<div align="center" class="col-md-4">
+								<button class="btn btn-primary form-control mbot15p">
+									<b>GO TO MY COURSE</b>
+								</button>
+							</div>
+						</div>
+						
+						<div>
+							<h4 align="center"><b>INDIAN ENGINEERING SERVICE(IES) EXAMINATION</b></h4>
+							<div>
+									<h5><b>About Exam</b></h5><br/>
+									Indian Engineering Services comprise of engineers who work under the government of India and
+									designated as Class – 1 officer. They administer a large segment of the public sector economy, 
+									which constitutes of Indian Railways, Power, Telecommunications, Central Water engineering,
+									Defence service of Engineers, Central Engineering Service, etc.  The first position offered is 
+									that of Asst. Executive engineer and the hierarchy ends at the position of Chairman/ Managing Director.
+									The Examination constitutes of a written examination followed by an interview for the personality test.
+									The recruitment of qualified candidates is made under the following categories:
+									<ul>
+										<li>Electronics & Telecommunication Engineering</li>
+										<li>Electrical Engineering</li>
+										<li>Mechanical Engineering</li>
+										<li>Civil Engineering</li>
+									</ul>
+									<h5><b>Eligibility</b></h5><br/>
+									<div class="table-responsive">          
+										<table class="table">
+												<thead>
+													<tr>
+														<td><b>#Category</b></td>
+														<td><b>#Details</b></td>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Nationality</td>
+														<td>A candidate must be either:
+															<ul>
+																<li>A citizen of India or</li>
+																<li>A subject of Nepal or A subject of Bhutan or</li>
+																<li>A Tibetan refugee who came over to Indian before the 1st January, 1962
+																with the intention of permanently settling in India  or</li>
+																<li>A person of Indian origin who has migrated from Pakistan, Burma, Sri Lanka 
+																or East African countries of Kenya, Uganda, the United Republic of Tanzania, 
+																Zambia, Malawi, Zaire and Ethiopia or from Vietnam with the intention of permanently 
+																settling in India.</li>
+															</ul>
+															Provided that a candidate belonging to categories (b), (c) and (d) above shall be a person 
+															in whose favor a certificate of eligibility has been issued by the Government of India.
+														</td>
+													</tr>
+													<tr>
+														<td>Age Limits</td>
+														<td>
+															<ul>
+																<li>
+																	A candidate for this examination must have attained the age of 21 years and must not 
+																	have attained the age of 30 years on the 1st January, of the exam year.
+																</li>
+																<li>
+																	The upper age-limit of 30 years will be relaxable up to 35 years in the case of Government
+																	servants of the following categories, if they are employed in a Department/Office under 
+																	the control of any of the authorities mentioned in column 1 below and apply for admission 
+																	to the examination for all or any of the Service(s)/Posts mentioned in column 2, for which 
+																	they are otherwise eligible.
+																</li>
+																<li>
+																	The upper age-limit prescribed above will be further relaxable:
+																	<ul>
+																		<li>
+																			Upto a maximum of five years if a candidate belongs to a scheduled caste or a 
+																			scheduled tribe.
+																		</li>
+																		<li>
+																			Upto a maximum of three years in the case of candidates belonging to OBC category.
+																		</li>
+																		<li>
+																			Upto a maximum of five years if a candidate had ordinarily been domiciled in the 
+																			state of Jammu & Kashmir during the period from 1st January, 1980 to the 31st day
+																			of December, 1989.
+																		</li>
+																		<li>
+																			Upto a maximum of three years in the case of defence service personnel disabled in
+																			operations during hostilities with any foreign country or in a disturbed area, and 
+																			released as a consequence thereof.
+																		</li>
+																		<li>
+																			Upto a maximum of five years in the case of ex-servicemen including Commissioned 
+																			Officers and ECOs/SSCOs who have rendered at least five years Military Service as 
+																			on 1st August, and have been released (i) on completion of assignment (including 
+																			those whose assignment is due to be completed within one year from 1st August) 
+																			otherwise than by way of dismissal or discharge on account of misconduct or 
+																			inefficiency, or (ii) on account of physical disability attributable to Military 
+																			Service or (iii) on invalidment; (vi) Upto a maximum of five years in the case of
+																			ECOs/SSCOs who have completed an initial period of assignment of five years of 
+																			Military Services as on 1st August, and whose assignment has been extended beyond
+																			five years and in whose case the Ministry of Defence issues a certificate that they
+																			can apply for civil employment and they will be released on three months notice on 
+																			selection from the date of receipt of offer of appointment.
+																		</li>
+																		<li>
+																			Upto a maximum of 10 years in the case of blind, deaf-mute and Orthopaedically 
+																			handicapped persons.
+																		</li>
+																	</ul>
+																</li>
+															</ul>
+														</td>
+													</tr>
+													<tr>
+														<td>Minimum Educational Qualifications</td>
+														<td>
+															<ul>
+																<li>
+																	Obtained a degree in Engineering from a university incorporated by an act of the central
+																	or state legislature in India or other educational institutions established by an act of 
+																	Parliament or declared to be deemed as universities under section-3 of the university 
+																	grants commission act, 1956 or 
+																</li>
+																<li>
+																	Passed Section A and B of the Institution Examinations of the Institution of Engineers 
+																	(India) or
+																</li>
+																<li>
+																	Obtained a degree/diploma in Engineering from such foreign University/College/Institution
+																	and under such conditions as may be recognised by the Government for the purpose from time
+																	to time or
+																</li>
+																<li>
+																	Passed Graduate Membership Examination of the Institute of Electronics and 
+																	Telecommunication Engineers (India) or
+																</li>
+																<li>
+																	Passed Associate Membership Examination Parts II and III/Sections A and B of the 
+																	Aeronautical Society of India or
+																</li>
+																<li>
+																	Passed Graduate Membership Examination of the Institution of Electronics and Radio 
+																	Engineers, London held after November 1959
+																</li>
+															</ul>
+															Provided that a candidate for the post of Indian Naval Armament Service (Electronics Engineering Posts
+															and Engineer Group 'A' in Wireless Planning and Coordination Wing/Monitoring Organization) may 
+															possess any of the above qualifications or the qualification mentioned below namely: M.Sc. degree 
+															or its equivalent with Wireless Communication, Electronics, Radio Physics or Radio Engineering as 
+															a special subject.
+														</td>
+													</tr>
+												</tbody>
+										</table>
+									</div>
+							</div>
+						</div>
+						
+						<div class="container-fluid mtop15p mbot5p">
+							<div align="center" class="col-md-4">
+								<button class="btn btn-primary form-control mbot15p">
+									<b>GO TO DISCUSSION</b>
+								</button>
+							</div>
+							<div align="center" class="col-md-4">
+								<a href="syllabus-ies.html">
+									<button class="btn btn-primary form-control mbot15p">
+										<b>VIEW SYLLABUS</b>
+									</button>
+								</a>
+							</div>
+							<div align="center" class="col-md-4">
+								<button class="btn btn-primary form-control mbot15p">
+									<b>GO TO MY COURSE</b>
+								</button>
+							</div>
+						</div>
+						
+                    </div>
+                </div>
+            </div>
+			
+        </div>
+ 
+</div>
+<!-- End: -->
+</body>
+</html>

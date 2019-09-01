@@ -1,0 +1,382 @@
+<html>
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+ <title></title>
+ <script src="js/jquery.min.js"></script>
+ <script src="js/bootstrap.min.js"></script>
+ <link href="styles/bootstrap.min.css" rel="stylesheet">
+ <link href="styles/simple-sidebar.css" rel="stylesheet"> 
+ <!-- App Body : Core Skeleton -->
+ <link href="styles/core-skeleton.css" rel="stylesheet">
+ <script src="js/core-skeleton.js"></script>
+
+ <script type="text/javascript">
+  $(document).ready(function(){ initOnload(); });
+
+  function initOnload() {
+	initCore();
+   // cursorToAndroid.androidAlert("Launched Initializer");
+  }
+ </script>
+</head>
+<body>
+<!-- Core Skeleton -->
+<!-- Start: -->
+<div id="wrapper" class="toggled">
+	<!-- Core Skeleton : Side and Top Menu -->
+	<div id="sidebar-wrapper">
+				<ul class="sidebar-nav">
+					<li class="" style=""><a href="dashboard.html" class="active">Home</a></li>
+					<li><a href="myprofile.html">My Profile</a></li>
+					<li><a href="mybookmark.html">My Bookmarks</a></li>
+					<li><a href="appfeedback.html">App Feedback</a></li>
+					<li><a href="#">Log out</a></li>
+				</ul>
+	</div>
+    <div id="page-content-wrapper">
+			<nav class="navbar navbar-inverse">
+				  <div class="container-fluid">
+					<div class="navbar-header">
+						  <a class="navbar-brand" style="cursor:pointer;" onclick="javascript:sideMenuToggle();">
+							<span class="glyphicon glyphicon-align-justify"></span>
+								&nbsp;
+							<span style="font-size:15px;font-weight:bold;">UPSC # Preparation-Network</span>
+						  </a>
+					</div>
+				 </div>
+			</nav>
+			
+			<div class="searchcontainer">
+				<div class="container-fluid">
+					<form>
+						<input type="text" placeholder="Enter your Search" class="form-control"/>
+					</form>
+				</div>
+			</div>
+			
+			<div class="maintabscontainer">
+				<ul class="nav nav-pills">
+					  <li id="mt_dashboard" data-toggle="tooltip" title="UPSC Dashboard" class="active" onclick="javascript:maintabSelection(this.id)">
+							<a href="dashboard.html">
+								<span class="glyphicon glyphicon-list-alt"></span>
+							</a>
+					  </li>
+					  <li id="mt_courses" data-toggle="tooltip" title="Learning Courses" onclick="javascript:maintabSelection(this.id)">
+							<a href="courses.html">
+								<span class="glyphicon glyphicon-book"></span>
+							</a>
+					  </li>
+					  <li id="mt_notifications" data-toggle="tooltip" title="Notifications" onclick="javascript:maintabSelection(this.id)">
+							<a href="notifications.html">
+								<span class="glyphicon glyphicon-globe"></span>
+							</a>
+					  </li>
+					  <li id="mt_calendar" data-toggle="tooltip" title="UPSC Examination Calendar"  onclick="javascript:maintabSelection(this.id)">
+						<a href="calendar.html">
+							<span class="glyphicon glyphicon-calendar"></span>
+						</a>
+					  </li>
+					  <li id="mt_discussion" data-toggle="tooltip" title="Discussion" onclick="javascript:maintabSelection(this.id)">
+							<a href="discussion.html">
+								<span class="glyphicon glyphicon-thumbs-up"></span>
+							</a>
+					  </li>
+					  <li id="mt_people"  data-toggle="tooltip" title="People" onclick="javascript:maintabSelection(this.id)">
+							<a href="people.html">
+								<span class="glyphicon glyphicon-user"></span>
+							</a>
+					  </li>
+				</ul>
+			</div>
+			
+			<!-- Core Page Body -->
+            <div class="container-fluid">
+				<!-- Buttons -->
+				<div class="row mtop10p">
+					<div class="col-md-4">
+						<a href="exam-pattern-cse.html">
+							<button class="btn btn-primary form-control"><b>GO TO EXAM PATTERN</b></button>
+						</a>
+					</div>
+					<div class="col-md-4">
+						<a href="syllabus-cse.html">
+							<button class="btn btn-primary form-control"><b>GO TO VIEW SYLLABUS</b></button>
+						</a>
+					</div>
+					<div class="col-md-4">
+						<button class="btn btn-primary form-control"><b>GO TO MY COURSE</b></button>
+					</div>
+				</div>
+				
+                <div class="row">
+                    <div class="col-lg-12">
+						<h4 align="center"><b>CIVIL SERVICE EXAMINATION(CSE)</b></h4>
+						<div>
+								<h4><b>About Civil Service Examination</b></h4>
+								<div>
+										Civil Service Examination is the exam conducted by UPSC in order to recruit the candidates in fulfilling
+										the vacancies in 
+										<ol type="i">
+										   <li>Indian Administrative Service</li>
+										   <li>Indian Foreign Service</li>
+										   <li>Indian Police Service</li>
+										   <li>Indian P & T Accounts & Finance Service</li>
+										   <li>Indian Audit and Accounts Service</li>
+										   <li>Indian Revenue Service (Customs and Central Excise)</li>
+										   <li>Indian Defence Accounts Service</li>
+										   <li>Indian Revenue Service (I.T.)</li>
+										   <li>Indian Ordnance Factories Service</li>
+										   <li>Indian Postal Service</li>
+										   <li>Indian Civil Accounts Service</li>
+										   <li>Indian Railway Traffic Service</li>
+										   <li>Indian Railway Accounts Service</li>
+										   <li>Indian Railway Personnel Service</li>
+										   <li>Post of Assistant Security Commissioner in Railway Protection Force</li>
+										   <li>Indian Defence Estates Service</li>
+										   <li>Indian Information Service (Junior Grade)</li>
+										   <li>Indian Trade Service</li>
+										   <li>Indian Corporate Law Service</li>
+										   <li>Armed Forces Headquarters Civil Service</li>
+										   <li>Delhi, Andaman & Nicobar Islands, Lakshadweep, Daman & Diu and Dadra & Nagar Haveli Civil Service</li>
+										   <li>Delhi, Andaman & Nicobar Islands, Lakshadweep, Daman & Diu and Dadra & Nagar Haveli Police Service</li>
+										   <li>Pondicherry Civil Service</li>
+										   <li>Pondicherry Police Service</li>
+										</ol>
+								</div>
+								<h4><b>Eligibility</b></h4>
+								<div>
+										 <h5><b>Nationality</b></h5>
+										 <div>For the Indian Administrative Service and the Indian Police Service, a candidate
+											  must be a citizen of India.
+											  For other services, a candidate must be either:—
+											  <ol type="A">
+												 <li>a citizen of India, or</li>
+												 <li>a subject of Nepal, or</li>
+												 <li>a subject of Bhutan, or</li>
+												 <li>a Tibetan refugee who came over to India before 1st January, 1962 with the
+													 intention of permanently settling in India, or</li>
+												 <li>a person of Indian origin who has migrated from Pakistan, Burma, Sri Lanka,
+													 East African countries of Kenya, Uganda, the United Republic of Tanzania, Zambia,
+													 Malawi, Zaire, Ethiopia and Vietnam with the intention of permanently settling in 
+													 India. Provided that a candidate belonging to categories (b), (c), (d) and (e) 
+													 shall be a person in whose favour a certificate of eligibility has been issued by 
+													 the Government of India.</li>
+											  </ol>
+											  Provided further that candidates belonging to categories (b), (c) and (d) above will not be
+											  eligible for appointment to the Indian Foreign Service.
+											  A candidate in whose case a certificate of eligibility is necessary, may be admitted to the
+											  examination but the offer of appointment may be given only after the necessary eligibility
+											  certificate has been issued to him/her by the Government of India.
+										  </div>
+										  <h5><b>Age Limits</b></h5>
+										  <div>A candidate must have attained the age of 21 years and must not have attained the age
+											   of 32 years on the 1st of August, 2017 i.e., he must have been born not earlier than 2nd
+											   August, 1985 and not later than 1st August, 1996. Necessary action to make corresponding
+											   changes in respective Rules/Regulations pertaining to various services is being taken
+											   separately.
+											   The upper age-limit prescribed above will be relaxable:
+											   <ol type="I">
+													<li>up to a maximum of five years if a candidate belongs to a Scheduled Caste or a
+														Scheduled Tribe;</li>
+													<li>up to a maximum of three years in the case of candidates belonging to Other Backward
+													    Classes who are eligible to avail of reservation applicable to such candidates;</li>
+													<li>up to a maximum of five years if a candidate had ordinarily been domiciled in the 
+													    State of Jammu and Kashmir during the period from the 1st January, 1980 to the 31st 
+														day of December, 1989;</li>
+													<li>up to a maximum of three years in the case of Defence Services Personnel, disabled 
+														in operations during hostilities with any foreign country or in a disturbed area and
+													    released as a consequence thereof;</li>
+													<li>up to a maximum of five years in the case of ex-servicemen including Commissioned
+														Officers and ECOs/SSCOs who have rendered at least five years Military Service as 
+														on 1st August, 2017 and have been released;
+														<ol type="1">
+															<li>on completion of assignment (including those whose assignment is due to be
+																completed within one year from 1st August, 2017 otherwise than by way of 
+																dismissal or discharge on account of misconduct or inefficiency; or</li>
+															<li>on account of physical disability attributable to Military Service; or</li>
+															<li>on invalidment.</li>
+														</ol>
+													</li>
+													<li>up to a maximum of five years in the case of ECOs/SSCOs who have completed an
+														initial period of assignment of five years of Military Service as on 1st August, 
+														2017 and whose assignment has been extended beyond five years and in whose case
+														the Ministry of Defence issues a certificate that they can apply for civil 
+														employment and that they will be released on three months’ notice on selection 
+														from the date of receipt of offer of appointment.</li>
+													<li>up to a maximum of 10 years in the case of blind, Hearing Impaired and
+														Orthopaedically handicapped persons.</li>
+												</ol>
+											</div>
+											<ul style="list-style-type:none;">
+												<li>
+													<b>Note I:—</b>
+													Candidates belonging to the Scheduled Castes and the Scheduled Tribes and the
+													Other Backward Classes who are also covered under any other clauses of Rule 6(b) above, 
+													viz. those coming under the category of Ex-servicemen, persons domiciled in the State of 
+													J & K, blind, Hearing Impaired and orthopaedically handicapped etc. will be eligible for 
+													grant of cumulative age-relaxation under both the categories.
+												</li>
+												<li>
+													<b>Note II:—</b>
+													The term Ex-servicemen will apply to the persons who are defined as
+													Ex-servicemen in the Ex-servicemen (Re-employment in Civil Services and Posts) Rules, 
+													1979, as amended from time to time.
+												</li>
+												<li>
+													<b>Note III:—</b>
+													The age concession under Rule 6(b)(v) and (vi) will not be admissible to
+													Ex-servicemen and Commissioned Officers including ECOs/SSCOs, who are released on own
+													request.
+												</li>
+												<li>
+													<b>Note IV:—</b>
+													Notwithstanding the provision of age relaxation under Rule 6(b)(vii) above, a
+												    physically disabled candidate will be considered to be eligible for appointment only if 
+													he/she (after such physical examination as the Government or appointing authority, as the 
+													case may be, may prescribe) is found to satisfy the requirements of physical and medical 
+													standards for the concerned Services/Posts to be allocated to the physically disabled 
+													candidates by the Government.
+												</li>
+											</ul>
+											Save as provided above, the age-limits prescribed can in no case be relaxed.<br/>
+											The date of birth, accepted by the Commission is that entered in the Matriculation or
+											Secondary School Leaving Certificate or in a certificate recognised by an Indian University as
+											equivalent to Matriculation or in an extract from a Register of Matriculates maintained by a
+											University which extract must be certified by the proper authority of the University or in the
+											Higher Secondary or an equivalent examination certificate. These certificates are required to
+											be submitted only at the time of applying for the Civil Services (Main) Examination. No other
+											document relating to age like horoscopes, affidavits, birth extracts from Municipal
+											Corporation, Service records and the like will be accepted. <br/>
+											The expression Matriculation/Higher Secondary Examination Certificate in this part of the
+											Instruction include the alternative certificates mentioned above.<br/>
+											<ul style="list-style-type:none;">
+												<li>
+													<b>Note 1:—</b>
+													Candidate should note that only the date of birth as recorded in the
+													Matriculation/Secondary Examination certificate or an equivalent certificate on the 
+													date of submission of application will be accepted by the Commission, and no subsequent
+													request for its change will be considered or granted.
+												</li>
+												<li>
+													<b>Note 2:—</b>
+													Candidates should also note that once a date of birth has been claimed by them and
+													entered in the records of the Commission for the purpose of admission to an Examination, 
+													no change will be allowed subsequently or at any other Examination of the Commission on 
+													any grounds whatsoever.
+												</li>
+												<li>
+													<b>Note 3:-</b>
+													The candidate should exercise due care while entering their date of birth in the online
+													Application Form for the Preliminary Examination. If on verification at any subsequent 
+													stage any variation is found in their date of birth from the one entered in their 
+													matriculation or equivalent Examination certificate, disciplinary action will be taken 
+													against them by the Commission under the Rules.
+												</li>
+											</ul>
+											<h5><b>Minimum Educational Qualifications</b></h5>
+											<div>The candidate must hold a degree of any of Universities incorporated by an Act of the Central 
+												 or State Legislature in India or other educational institutions established by an Act of 
+												 Parliament or declared to be deemed as a University Under Section-3 of the University Grants 
+												 Commission Act, 1956, or possess an equivalent qualification.<br/>
+												 <b>Note I:</b> Candidates who have appeared at an examination the passing of which would render
+												 them educationally qualified for the Commission’s examination but have not been informed of
+												 the results as also the candidates who intend to appear at such a qualifying examination will
+												 also be eligible for admission to the Preliminary Examination. All candidates who are declared
+												 qualified by the Commission for taking the Civil Services (Main)
+												 Examination will be required to produce proof of passing the requisite examination with their
+												 application for the Main Examination failing which such candidates will not be admitted to the
+												 Main Examination. The applications for the Main Examination will be called sometime in the
+												 month of September/October, 2017.<br/>
+												 <b>Note II:</b> In exceptional cases the Union Public Service Commission may treat a candidate who
+												 has not any of the foregoing qualifications as a qualified candidate provided that he/she has
+												 passed examination conducted by the other Institutions, the standard of which in the opinion
+												 of the Commission justifies his/her admission to the examination.<br/>
+												 <b>Note III:</b> Candidates possessing professional and technical qualifications which are 
+												 recognised by the Government as equivalent to professional and technical degree would also be 
+												 eligible for admission to the examination.<br/>
+												 <b>Note IV:</b> Candidates who have passed the final professional M.B.B.S. or any other Medical
+												 Examination but have not completed their internship by the time of submission of their
+												 applications for the Civil Services (Main) Examination, will be provisionally admitted to the
+												 Examination provided they submit along with their application a copy of certificate from the
+												 concerned authority of the University/Institution that they had passed the requisite final
+												 professional medical examination. In such cases, the candidates will be required to produce at
+												 the time of their interview original Degree or a certificate from the concerned competent
+												 authority of the University/Institution that they had completed all requirements (including
+												 completion of internship) for the award of the Degree.
+											</div>
+											<h5><b>Number of attempts</b></h5>
+											<div>Every candidate appearing at the examination who is otherwise eligible, shall be permitted six 
+												 attempts at the examination. Provided that this restriction on the number of attempts will not 
+												 apply in the case of Scheduled Castes and Scheduled Tribes candidates who are otherwise eligible.
+												 Provided further that the number of attempts permissible to candidates belonging to Other
+												 Backward Classes, who are otherwise eligible shall be nine. The relaxation will be available to
+												 the candidates who are eligible to avail of reservation applicable to such candidates.
+												 Provided further that a physically handicapped will get as many attempts as are available
+												 to other non-physically handicapped candidates of his or her community, subject to the
+												 condition that a physically handicapped candidate belonging to the General Category shall be
+												 eligible for nine attempts. Necessary action to make Corresponding Changes in respective
+												 Rules/Regulations Pertaining to various services is being taken separately. The relaxation will
+												 be available to the physically handicapped candidates who are eligible to avail of reservation
+												 applicable to such candidates.<br/>
+												 <b>Note:</b>
+												 <ol type="list-style-type:none;">
+													    <li>An attempt at a Preliminary Examination shall be deemed to be an attempt at the
+														    Civil Services Examination.
+														</li>
+														<li>If a candidate actually appears in any one paper in the Preliminary Examination,
+															he/she shall be deemed to have made an attempt at the Examination.
+														</li>
+														<li>Notwithstanding the disqualification/ cancellation of candidature, the fact of
+															appearance of the candidate at the examination will count as an attempt.
+														</li>
+												</ol>
+											</div>
+											<h5><b>Restrictions on applying for the examination</b></h5>
+											<div>A candidate who is appointed to the Indian Administrative Service or the Indian Foreign Service 
+												 on the results of an earlier examination and continues to be a member of that service will not be
+												 eligible to compete at this examination. In case such a candidate is appointed to the IAS/IFS 
+												 after the Preliminary Examination of Civil Services Examination, 2017 is over and he/she continues 
+												 to be a member of that service, he/she shall not be eligible to appear in the Civil Services 
+												 (Main) Examination, 2017 notwithstanding his/her having qualified in the Preliminary Examination,
+												 2017. Also provided that if such a candidate is appointed to IAS/IFS after the commencement
+												 of the Civil Services (Main) Examination, 2017 but before the result thereof and continues to be
+												 a member of that service, he/she shall not be considered for appointment to any service/post
+												 on the basis of the result of this examination viz. Civil Services Examination, 2017.
+											</div>
+											<h5><b>Physical Standards</b></h5>
+											<div>Candidates must be physically fit according to physical standards for
+												 admission to Civil Services Examination, 2017 as per guidelines given in Appendix-III of Rules
+												 for Examination published in the Gazette of India Extraordinary dated 22nd February, 2017.
+											</div>
+								</div>
+						</div>	
+						
+                    </div>
+                </div>
+				
+				<div class="row mtop10p mbot15p">
+					<div class="col-md-4">
+						<a href="exam-pattern-cse.html">
+							<button class="btn btn-primary form-control"><b>GO TO EXAM PATTERN</b></button>
+						</a>
+					</div>
+					<div class="col-md-4">
+						<a href="syllabus-cse.html">
+							<button class="btn btn-primary form-control"><b>GO TO VIEW SYLLABUS</b></button>
+						</a>
+					</div>
+					<div class="col-md-4">
+						<button class="btn btn-primary form-control"><b>GO TO MY COURSE</b></button>
+					</div>
+				</div>
+				
+				
+            </div>
+			
+        </div>
+ 
+</div>
+<!-- End: -->
+</body>
+</html>

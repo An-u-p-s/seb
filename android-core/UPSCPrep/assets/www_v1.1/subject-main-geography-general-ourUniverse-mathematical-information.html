@@ -1,0 +1,250 @@
+<html>
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+ <title></title>
+ <script src="js/jquery.min.js"></script>
+ <script src="js/bootstrap.min.js"></script>
+ <link href="styles/bootstrap.min.css" rel="stylesheet">
+ <link href="styles/simple-sidebar.css" rel="stylesheet"> 
+ <!-- App Body : Core Skeleton -->
+ <link href="styles/core-skeleton.css" rel="stylesheet">
+ <script src="js/core-skeleton.js"></script>
+ <style>
+	#mi-sun, #mi-moon, #mi-mercury, #mi-venus, #mi-earth, #mi-jupiter, #mi-saturn, #mi-uranus, #mi-neptune { line-height:30px; }
+ </style>
+ <script type="text/javascript">
+  $(document).ready(function(){ initOnload(); });
+
+  function initOnload() {
+	initCore();
+   // cursorToAndroid.androidAlert("Launched Initializer");
+  }
+ </script>
+</head>
+<body>
+<!-- Core Skeleton -->
+<!-- Start: -->
+<div id="wrapper" class="toggled">
+	<!-- Core Skeleton : Side and Top Menu -->
+	<div id="sidebar-wrapper">
+				<ul class="sidebar-nav">
+					<li><a class="active" href="dashboard.html">Home</a></li>
+					<li><a href="myprofile.html">My Profile</a></li>
+					<li><a href="mybookmark.html">My Bookmarks</a></li>
+					<li><a href="appfeedback.html">App Feedback</a></li>
+					<li><a href="#">Log out</a></li>
+				</ul>
+	</div>
+    <div id="page-content-wrapper">
+			<nav class="navbar navbar-inverse">
+				  <div class="container-fluid">
+					<div class="navbar-header">
+						  <a class="navbar-brand" style="cursor:pointer;" onclick="javascript:sideMenuToggle();">
+							<span class="glyphicon glyphicon-align-justify"></span>
+								&nbsp;
+							<span style="font-size:15px;font-weight:bold;">UPSC # Preparation-Network</span>
+						  </a>
+					</div>
+				 </div>
+			</nav>
+			
+			<div class="searchcontainer">
+				<div class="container-fluid">
+					<form>
+						<input type="text" placeholder="Enter your Search" class="form-control"/>
+					</form>
+				</div>
+			</div>
+			
+			<div class="maintabscontainer">
+				<ul class="nav nav-pills">
+					  <li id="mt_dashboard" data-toggle="tooltip" title="UPSC Dashboard" class="active" onclick="javascript:maintabSelection(this.id)">
+							<a href="dashboard.html">
+								<span class="glyphicon glyphicon-list-alt"></span>
+							</a>
+					  </li>
+					  <li id="mt_courses" data-toggle="tooltip" title="Learning Courses" onclick="javascript:maintabSelection(this.id)">
+							<a href="courses.html">
+								<span class="glyphicon glyphicon-book"></span>
+							</a>
+					  </li>
+					  <li id="mt_notifications" data-toggle="tooltip" title="Notifications" onclick="javascript:maintabSelection(this.id)">
+							<a href="notifications.html">
+								<span class="glyphicon glyphicon-globe"></span>
+							</a>
+					  </li>
+					  <li id="mt_calendar" data-toggle="tooltip" title="UPSC Examination Calendar"  onclick="javascript:maintabSelection(this.id)">
+						<a href="calendar.html">
+							<span class="glyphicon glyphicon-calendar"></span>
+						</a>
+					  </li>
+					  <li id="mt_discussion" data-toggle="tooltip" title="Discussion" onclick="javascript:maintabSelection(this.id)">
+							<a href="discussion.html">
+								<span class="glyphicon glyphicon-thumbs-up"></span>
+							</a>
+					  </li>
+					  <li id="mt_people"  data-toggle="tooltip" title="People" onclick="javascript:maintabSelection(this.id)">
+							<a href="people.html">
+								<span class="glyphicon glyphicon-user"></span>
+							</a>
+					  </li>
+				</ul>
+			</div>
+			
+			<!-- Core Page Body -->
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+						<h4 align="center"><b>MATHEMATICAL INFORMATION</b></h4>
+						<div>
+							<ol class="breadcrumb">
+								<li><a href="subject-main-geography.html" class="black-anchor">Geography</a></li>
+								<li><a href="subject-main-geography-general-ourUniverse.html" class="black-anchor">General Geography : Our Universe</a></li>
+								<li><a href="#" class="black-anchor"><b>Mathematical Information</b></a></li>
+							</ol>
+						</div>
+						<div class="panel panel-success">
+							<div class="panel-heading">
+									<h5><b>Light Year</b></h5>
+									<div> Distance covered by Light travelling One year in 
+										<span data-toggle="tooltip" title="Space without any fluid like air or other">a Vaccum</span> (9.46 X 10<sup>12</sup> Kms.)
+									</div>
+									<h5><b>Astronomical Unit (AU)</b></h5>
+									<div>The Mean distance between the Sun and the Earth (1.49 x 108 km). 1 light year = 60,000 AU.</div>
+									<h5><b>Cosmic Year/ Galactic Year</b></h5>
+									<div>The Timeperiod of revolution of Sun around the galactic centre (250 million years).</div>
+									<h5><b>Parsec</b></h5>
+									<div>Distance at which the mean radius of the Earth's orbit subtends an angle of one second of an arc.
+									1 parsec = 3.26 light years. </div>
+							</div>
+						</div>
+						
+						<div class="panel panel-danger">
+							<div class="panel-heading curpoint" data-target="#mi-sun" data-toggle="collapse">
+								<b>Sun</b>
+								<span class="glyphicon glyphicon-chevron-down pull-right"></span>
+							</div>
+							<div id="mi-sun" class="panel-body collapse">
+								<div><b>Weight of Sun:</b> 2 X 10<sup>27</sup> tonnes (109 times bigger than Earth)</div>
+								<div><b>Distance between Sun and Earth:</b> 150 million Kms.</div>
+								<div><b>Time taken by Sunlight to reach Earth from Sun:</b> 8 minutes</div>
+								<div><b>The Timeperiod of revolution of Sun to complete 1 Cosmic Year/ Galactic Year:</b> 250 million years</div>
+								<div><img src="img/subjects/geography/sun-layers.jpg"/></div>
+								<div><b>Temperature of Photosphere:</b> 6,000 &deg;C</div>
+								<div><b>Temperature of Chromosphere:</b> 32,400 &deg;C</div>
+								<div><b>Temperature of Corona:</b> 2,700,000 &deg;C</div>
+								<div><b>Temperature Core of the Sun:</b> 15 Million &deg;K</div>
+								<div><b>Temperature at Sun Spots:</b> 1,500 &deg;K</div>
+							</div>
+						</div>
+						
+						<div class="panel panel-danger">
+							<div class="panel-heading curpoint" data-target="#mi-moon" data-toggle="collapse">
+								<b>Moon</b>
+								<span class="glyphicon glyphicon-chevron-down pull-right"></span>
+							</div>
+							<div id="mi-moon" class="panel-body collapse">
+								<div><b>Diameter of the Moon:</b> 3475 Kms.(1/4th of Earth's Diameter)</div>
+								<div><b>As Moon revolves around Earth in Elliptical Path,</b></div>
+								<div><b>Maximum Distance (Apogee):</b> 4,06,000 Kms.</div>
+								<div><b>Minimum Distance (Perigee):</b> 3,64,000 Kms.</div>
+								<div><b>Time taken by Moon to revolve around the Earth:</b> 27 days</div>
+							</div>
+						</div>
+						
+						<div class="panel panel-danger">
+							<div class="panel-heading curpoint" data-target="#mi-mercury" data-toggle="collapse">
+								<b>Mercury</b>
+								<span class="glyphicon glyphicon-chevron-down pull-right"></span>
+							</div>
+							<div id="mi-mercury" class="panel-body collapse">
+								<div><b>Time taken by Mercury to revolve around Sun:</b> 88 days</div>
+								<div><b>Number of Satellites:</b> 0</div>
+							</div>
+						</div>
+						
+						<div class="panel panel-danger">
+							<div class="panel-heading curpoint" data-target="#mi-venus" data-toggle="collapse">
+								<b>Venus</b>
+								<span class="glyphicon glyphicon-chevron-down pull-right"></span>
+							</div>
+							<div id="mi-venus" class="panel-body collapse">
+								<div>It is an hotest Planet with <b>90-95% of Carbondioxide</b></div>
+								<div><b>Atmospheric Pressure:</b> 100 times than Earth</div>
+								<div><b>Number of Satellites:</b> 0</div>
+							</div>
+						</div>
+						
+						<div class="panel panel-danger">
+							<div class="panel-heading curpoint" data-target="#mi-earth" data-toggle="collapse">
+								<b>Earth</b>
+								<span class="glyphicon glyphicon-chevron-down pull-right"></span>
+							</div>
+							<div id="mi-earth" class="panel-body collapse">
+								<div><b>Number of Satellites:</b> 1</div>
+							</div>
+						</div>
+						
+						<div class="panel panel-danger">
+							<div class="panel-heading curpoint" data-target="#mi-mars" data-toggle="collapse">
+								<b>Mars</b>
+								<span class="glyphicon glyphicon-chevron-down pull-right"></span>
+							</div>
+							<div id="mi-mars" class="panel-body collapse">
+								<div><b>Number of Satellites:</b> 2</div>
+							</div>
+						</div>
+						
+						<div class="panel panel-danger">
+							<div class="panel-heading curpoint" data-target="#mi-jupiter" data-toggle="collapse">
+								<b>Jupiter</b>
+								<span class="glyphicon glyphicon-chevron-down pull-right"></span>
+							</div>
+							<div id="mi-jupiter" class="panel-body collapse">
+								<div><b>Number of Satellites:</b> 67</div>
+							</div>
+						</div>
+						
+						<div class="panel panel-danger">
+							<div class="panel-heading curpoint" data-target="#mi-saturn" data-toggle="collapse">
+								<b>Saturn</b>
+								<span class="glyphicon glyphicon-chevron-down pull-right"></span>
+							</div>
+							<div id="mi-saturn" class="panel-body collapse">
+								<div><b>Number of Satellites:</b> 62</div>
+							</div>
+						</div>
+						
+						
+						<div class="panel panel-danger">
+							<div class="panel-heading curpoint" data-target="#mi-uranus" data-toggle="collapse">
+								<b>Uranus</b>
+								<span class="glyphicon glyphicon-chevron-down pull-right"></span>
+							</div>
+							<div id="mi-uranus" class="panel-body collapse">
+								<div><b>Number of Satellites:</b> 27</div>
+							</div>
+						</div>
+						
+						
+						<div class="panel panel-danger">
+							<div class="panel-heading curpoint" data-target="#mi-neptune" data-toggle="collapse">
+								<b>Neptune</b>
+								<span class="glyphicon glyphicon-chevron-down pull-right"></span>
+							</div>
+							<div id="mi-neptune" class="panel-body collapse">
+								<div><b>Number of Satellites:</b> 14</div>
+							</div>
+						</div>
+						
+                    </div>
+                </div>
+            </div>
+			
+        </div>
+ 
+</div>
+<!-- End: -->
+</body>
+</html>
