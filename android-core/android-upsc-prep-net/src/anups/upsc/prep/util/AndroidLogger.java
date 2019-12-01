@@ -9,6 +9,7 @@ import android.Manifest;
 import android.content.Context;
 import android.os.Environment;
 import android.widget.Toast;
+import anups.upsc.prep.app.AndroidWebScreen;
 import anups.upsc.prep.constants.BusinessConstants;
 
 public class AndroidLogger {
@@ -21,8 +22,7 @@ public class AndroidLogger {
 	  Logger log = Logger.getLogger(clazz);
 	  try {
      	//   log.setLevel(Level.ERROR);
-	    String filePath=BusinessConstants.INTERNALMEMORYPATH+"/"+"upscprepnetwrk";
-        logConfigurator.setFileName(filePath+"/logs/log.txt");
+        logConfigurator.setFileName(BusinessConstants.PROJECTSTORAGEFOLDER+"/logs/log.txt");
         logConfigurator.setRootLevel(Level.ALL);
         logConfigurator.setLevel("org.apache", Level.ALL);
         logConfigurator.setUseFileAppender(true);
@@ -36,7 +36,7 @@ public class AndroidLogger {
     }
 
 	public static void regulateLoggerFile(){
-        String filePath=BusinessConstants.INTERNALMEMORYPATH+"/upscprepnetwrk/logs/log.txt";
+        String filePath=BusinessConstants.PROJECTSTORAGEFOLDER+"/logs/log.txt";
  	   File file = new File(filePath);
  	   long fileSize = Integer.parseInt(String.valueOf(file.length()));
  	   logger.info("Logger File Size: "+fileSize);

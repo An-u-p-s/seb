@@ -1,11 +1,11 @@
 package anups.upsc.prep.js;
 
+import android.app.Activity;
 import android.content.Context;
-import android.support.v7.app.ActionBarActivity;
 import android.webkit.JavascriptInterface;
-import anups.dun.notify.ws.util.Notifications;
+import anups.upsc.prep.notify.ws.util.Notifications;
 
-public class AppNotifyManagement extends ActionBarActivity {
+public class AppNotifyManagement extends Activity {
 	Context mContext;
 	public AppNotifyManagement(Context c) {  mContext = c; }
 	@JavascriptInterface

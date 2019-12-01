@@ -11,7 +11,7 @@ import android.view.Window;
 import android.widget.MediaController;
 import android.widget.Toast;
 import android.widget.VideoView;
-import anups.upsc.prep.app.R;
+import anups.upsc.prep.activities.R;
 
 public class AndroidWebScreenVideo extends Activity {
 
@@ -21,7 +21,7 @@ public class AndroidWebScreenVideo extends Activity {
 	VideoView videoview;
 
 	// Insert your Video URL
-	// String VideoURL = "http://www.androidbegin.com/tutorial/AndroidCommercial.3gp";
+	String VideoURL = "http://www.androidbegin.com/tutorial/AndroidCommercial.3gp";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +36,7 @@ public class AndroidWebScreenVideo extends Activity {
 		String videoURL = getIntent().getStringExtra("VIDEO_URL");
 		Toast.makeText(this.getApplicationContext(), "VIDEO_URL"+videoURL, Toast.LENGTH_SHORT).show();
 		
-	//	if(videoURL.length()>0){ this.VideoURL=videoURL; }
+		if(videoURL.length()>0){ this.VideoURL=videoURL; }
 		
 		// Create a progressbar
 		pDialog = new ProgressDialog(AndroidWebScreenVideo.this);
@@ -54,7 +54,7 @@ public class AndroidWebScreenVideo extends Activity {
 			MediaController mediacontroller = new MediaController(AndroidWebScreenVideo.this);
 			mediacontroller.setAnchorView(videoview);
 			// Get the URL from String VideoURL
-			Uri video = Uri.parse(videoURL);
+			Uri video = Uri.parse(VideoURL);
 			videoview.setMediaController(mediacontroller);
 			videoview.setVideoURI(video);
 

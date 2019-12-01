@@ -12,17 +12,17 @@ import java.util.Properties;
 
 import android.content.Context;
 import android.widget.Toast;
+import anups.upsc.prep.app.AndroidWebScreen;
 import anups.upsc.prep.constants.BusinessConstants;
 import anups.upsc.prep.js.AppSessionManagement;
-import anups.upsc.prep.js.AppManagement;
 
 public class PropertyUtility {
  org.apache.log4j.Logger logger = AndroidLogger.getLogger(PropertyUtility.class);
  private Context context;
  public PropertyUtility(Context context){  this.context=context; }
  
- public String createProjectPath(AppManagement appSessionManagement){
-   String folderPath=BusinessConstants.INTERNALMEMORYPATH+"/"+"mylocalhook";
+ public String createProjectPath(AppSessionManagement appSessionManagement){
+   String folderPath=BusinessConstants.INTERNALMEMORYPATH+"/"+".mylocalhook";
    File externalDir = new File(folderPath);
    if(!externalDir.exists()) { externalDir.mkdir();  }
    appSessionManagement.setAndroidSession(BusinessConstants.ANDROID_PROJECTPATH, folderPath);

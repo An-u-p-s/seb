@@ -1,13 +1,13 @@
 package anups.upsc.prep.js;
 
+import android.app.Activity;
 import android.content.Context;
 import android.database.Cursor;
-import android.support.v7.app.ActionBarActivity;
 import android.webkit.JavascriptInterface;
 import android.widget.Toast;
 import anups.upsc.prep.db.DB;
 
-public class AppSQLiteManagement extends ActionBarActivity {
+public class AppSQLiteManagement extends Activity {
 	Context mContext;
 	public AppSQLiteManagement(Context c) {  mContext = c; }
 	

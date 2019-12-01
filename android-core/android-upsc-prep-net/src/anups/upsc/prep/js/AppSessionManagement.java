@@ -1,12 +1,12 @@
 package anups.upsc.prep.js;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
-import android.support.v7.app.ActionBarActivity;
 import android.webkit.JavascriptInterface;
 
-public class AppSessionManagement extends ActionBarActivity {
+public class AppSessionManagement extends Activity {
 	@SuppressWarnings("unused")
 	private Context mContext;
 	SharedPreferences pref;

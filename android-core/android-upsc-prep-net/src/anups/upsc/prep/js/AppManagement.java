@@ -1,25 +1,38 @@
 package anups.upsc.prep.js;
 
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
+import java.io.StringWriter;
+import java.io.Writer;
+import java.util.Arrays;
+
+import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.content.res.AssetManager;
 import android.net.Uri;
 import android.provider.Settings;
-import android.support.v7.app.ActionBarActivity;
 import android.webkit.JavascriptInterface;
 import android.widget.Toast;
+import anups.upsc.prep.app.AndroidWebScreen;
+import anups.upsc.prep.constants.BusinessConstants;
+import anups.upsc.prep.media.AndroidWebScreenVideo;
+import anups.upsc.prep.notify.ws.FilesTransactionService;
 import anups.upsc.prep.util.AndroidLogger;
-import anups.dun.media.AndroidWebScreenVideo;
-import anups.dun.util.AndroidLogger;
-import anups.dun.util.CRUDContacts;
-import anups.dun.util.GPSTracker;
-import anups.dun.util.Masking;
+import anups.upsc.prep.util.CRUDContacts;
+import anups.upsc.prep.util.FilesTransactionUtility;
+import anups.upsc.prep.util.GPSTracker;
+import anups.upsc.prep.util.Masking;
+import anups.upsc.prep.util.NewGPSTracker;
 import anups.upsc.prep.util.PropertyUtility;
-import anups.dun.web.templates.URLGenerator;
+import anups.upsc.prep.web.templates.URLGenerator;
 
-public class AppManagement extends ActionBarActivity {
+public class AppManagement extends Activity {
   org.apache.log4j.Logger logger = AndroidLogger.getLogger(AppManagement.class);
 	Context mContext;
 	public AppManagement(Context c) {  mContext = c; }
@@ -82,6 +95,55 @@ public class AppManagement extends ActionBarActivity {
     }
 	
 	@JavascriptInterface
+	public String getTemplateAndLoad(String fileName) {
+	    AssetManager mgr = mContext.getAssets();
+		StringBuilder text = new StringBuilder();
+		try {
+		 InputStream in = mgr.open(BusinessConstants.ASSETS_WWW_FOLDER+fileName, AssetManager.ACCESS_BUFFER);
+		BufferedReader br = new BufferedReader(new InputStreamReader(in));
+		 String line;
+         while ((line = br.readLine()) != null) {
+		         text.append(line).append('\n');
+		     }
+		     br.close();
+		} catch(Exception e) {  logger.error("Exception : "+e.getMessage()); }	
+		return text.toString();
+    }
+	
+	private FilesTransactionUtility filesTransactionUtility;
+	
+	@JavascriptInterface
+	public void fileTransaction(String downloadFrom, String downloadTo, String fileName, 
+			String transactionMode, String transactionFormat){
+    /* =======================================
+     * FUNCTION DESCRIPTION :
+     * =======================================
+     *  This Function is used from Javascript to transfer Data from Device to Server and from
+     *  Server to Device.
+     * =======================================
+     * FUNCTION PARAMETERS :
+     * =======================================
+     * 1) downloadFromURL
+     * 2) downloadToPath
+     * 3) fileName
+     * 4) transactionMode (SERVER_TO_CLIENT/CLIENT_TO_SERVER)
+     *    a) SERVER_TO_CLIENT - Transfers Files from Server to Client
+     *    b) CLIENT_TO_SERVER - Transfers Files from Client to Server
+     * 5) transactionFormat (DELETE_BEFORE_UPLOAD/EXISTS_NO_UPLOAD)
+     *    a) DELETE_BEFORE_UPLOAD - Deletes currently exists File before Upload
+     *    b) EXISTS_NO_UPLOAD - Checks File exists or not, If Exists File will not upload
+     */
+	 filesTransactionUtility = new FilesTransactionUtility();
+	 FilesTransactionService filesTransactionService = new FilesTransactionService(mContext,filesTransactionUtility);
+	 filesTransactionService.execute(new String[]{downloadFrom, downloadTo, fileName, transactionMode, transactionFormat});
+	}
+	
+	@JavascriptInterface
+	public float fileTransactionProgress(){
+	 return filesTransactionUtility.getProgressBar();
+	}
+	
+	@JavascriptInterface
 	public void showToast(String toast) {
         Toast.makeText(mContext, toast, Toast.LENGTH_SHORT).show();
     }
@@ -111,11 +173,15 @@ public class AppManagement extends ActionBarActivity {
 	}
 	
 	@JavascriptInterface
-	public void loadAndroidWebScreen(String directURL){
+	public void loadAndroidWebScreen(String directURL, String activityColor){
 		Intent intent = new Intent(mContext, AndroidWebScreen.class);
-		   intent.setData(Uri.parse(directURL));
+		 //  intent.setData(Uri.parse(directURL));
+		   intent.putExtra("COLOR", activityColor);
+		   intent.putExtra("URL",directURL);
 		mContext.startActivity(intent);
 	}
+	
+	
 	
 	@JavascriptInterface
 	public int getAndroidVersion(){
@@ -124,10 +190,13 @@ public class AppManagement extends ActionBarActivity {
 	
 	@JavascriptInterface
 	public String getUserMobileGPSPosition(){
-		GPSTrackerAPI gpsTracker = new GPSTrackerAPI(mContext);
+		GPSTracker gpsTracker = new GPSTracker(mContext);
 		StringBuilder jsonData = new StringBuilder();
-		jsonData.append("{").append("\"latitude\":\"").append(gpsTracker.latitude).append("\",");
-		jsonData.append("\"longitude\":\"").append(gpsTracker.longitude).append("\"}");
+		double lat = gpsTracker.getLatitude();
+		double lng = gpsTracker.getLongitude();
+		jsonData.append("{").append("\"lat\":").append(lat).append(",");
+		jsonData.append("\"lng\":").append(lng).append("}");
+	  logger.info("mylatlng : "+jsonData.toString());
 	  return jsonData.toString();
 	}
 

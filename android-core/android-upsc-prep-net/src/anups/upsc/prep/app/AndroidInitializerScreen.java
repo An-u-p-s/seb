@@ -1,15 +1,23 @@
 package anups.upsc.prep.app;
 
-import anups.upsc.prep.activities.R;
-import anups.upsc.prep.constants.BusinessConstants;
-import anups.upsc.prep.util.AndroidLogger;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
+import android.view.View;
 import android.view.Window;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import anups.upsc.prep.constants.BusinessConstants;
+import anups.upsc.prep.js.AppManagement;
+import anups.upsc.prep.js.AppNotifyManagement;
+import anups.upsc.prep.js.AppSQLiteManagement;
+import anups.upsc.prep.js.AppSessionManagement;
+import anups.upsc.prep.util.AndroidLogger;
+import anups.upsc.prep.util.NetworkUtility;
+import anups.upsc.prep.activities.R;
 
 @SuppressLint({ "NewApi", "SetJavaScriptEnabled" })
 public class AndroidInitializerScreen extends Activity {
@@ -22,13 +30,13 @@ public class AndroidInitializerScreen extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
     	super.onCreate(savedInstanceState);
     	requestWindowFeature(Window.FEATURE_NO_TITLE);
-    	
     	setTitle(R.string.app_name);
     	setContentView(R.layout.activity_androidinitializer);
     }
 
     @Override
     public void onResume(){
+      
       logger.info("Resume AndroidInitializerScreen");
       super.onResume();
       AppManagement appManagement = new AppManagement(this);
@@ -67,9 +75,9 @@ public class AndroidInitializerScreen extends Activity {
 			String USER_ID=appSessionManagement.getAndroidSession(BusinessConstants.AUTH_USER_ID);
 			logger.info("USER_ID: "+USER_ID);
 			if(USER_ID==null){
-		      new Notifications(this.getApplicationContext()).notify_show_signInRegister();
+		     // new Notifications(this.getApplicationContext()).notify_show_signInRegister();
 			}
-			webView.loadUrl("file:///android_asset/www/app-default.html");
+			webView.loadUrl("file:///android_asset/www/app-init-default.html");
 		 }
 		 else{  webView.loadUrl("file:///android_asset/www/network_state.html");  }
       } catch(Exception e){  logger.info("Exception: "+e); }
