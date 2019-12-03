@@ -20,6 +20,7 @@ import android.view.Window;
 import android.webkit.ValueCallback;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.widget.Toast;
 
 import com.google.android.gms.maps.GoogleMap;
 
@@ -161,7 +162,7 @@ public boolean doesPermissionExist(String permission){
 }
 
 public void makeAPermission(String[] permissions){
-	  requestPermissions(permissions,REQUEST_CODE_ASK_PERMISSIONS);  // 
+  requestPermissions(permissions,REQUEST_CODE_ASK_PERMISSIONS);  // 
 }
 
 @SuppressWarnings("deprecation")
@@ -226,11 +227,12 @@ public void onRequestPermissionsResult(int requestCode, String[] permissions, in
 @SuppressLint("SetJavaScriptEnabled")
 @Override
 protected void onCreate(Bundle savedInstanceState) {
- logger.info("MyLocalHook Activity Container Created...");
+// logger.info("MyLocalHook Activity Container Created...");
+ Toast.makeText(this, "MyLocalHook Activity Container Created...", Toast.LENGTH_SHORT).show();
  super.onCreate(savedInstanceState);
  requestWindowFeature(Window.FEATURE_NO_TITLE);
  setTitle(R.string.app_name);
- setContentView(R.layout.activity_androidwebscreenvideo);
+ setContentView(R.layout.activity_androidwebscreen);
  
  Intent intent = getIntent();
  Uri data = intent.getData();
@@ -296,10 +298,10 @@ protected void onCreate(Bundle savedInstanceState) {
  logger.info("USER_ID: "+USER_ID);
  
  /* Triggering Broadcast Receiver from Activity */
-  Intent triggerWS = new Intent();
+ /* Intent triggerWS = new Intent();
          triggerWS.setAction("anups.dun.services.StartupService");
          sendBroadcast(triggerWS);
- 
+ */
 
  // NetworkUtility networkUtility = new NetworkUtility(this);
  // logger.info("IMEI: "+networkUtility.getDeviceIMEI());
@@ -343,6 +345,7 @@ protected void onCreate(Bundle savedInstanceState) {
         	if(extras!=null){
      		   directURL = extras.getString("URL"); 
      		   if("LOAD_STARTUP".equalsIgnoreCase(directURL)){
+     			  Toast.makeText(this, "permissionsExist: "+permissionsExist(), Toast.LENGTH_LONG);
      			  if(!permissionsExist()){
      	        	directURL="file:///android_asset/www/app-init-permissions.html";
      	          } 

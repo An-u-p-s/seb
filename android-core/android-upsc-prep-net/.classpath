@@ -8,5 +8,14 @@
 	<classpathentry kind="lib" path="libs/android_libs/appcompat-v7-26.0.1.jar"/>
 	<classpathentry kind="lib" path="libs/android_libs/support-v4-26.0.1.jar"/>
 	<classpathentry kind="lib" path="libs/android_libs/support-compat-26.1.0.jar"/>
+	<classpathentry kind="lib" path="libs/facebook_libs/facebook-applinks.jar"/>
+	<classpathentry kind="lib" path="libs/facebook_libs/facebook-common.jar"/>
+	<classpathentry kind="lib" path="libs/facebook_libs/facebook-core.jar"/>
+	<classpathentry kind="lib" path="libs/facebook_libs/facebook-login.jar"/>
+	<classpathentry kind="lib" path="libs/facebook_libs/facebook-marketing.jar"/>
+	<classpathentry kind="lib" path="libs/facebook_libs/facebook-messenger.jar"/>
+	<classpathentry kind="lib" path="libs/facebook_libs/facebook-places.jar"/>
+	<classpathentry kind="lib" path="libs/facebook_libs/facebook-share.jar"/>
+	<classpathentry kind="lib" path="libs/facebook_libs/facebook.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>

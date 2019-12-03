@@ -14,10 +14,12 @@ function progressLoader(){
 
 $(document).ready(function(){
  progressLoader();
+ Android.showToast(AndroidSession+" "+Android);
  if(AndroidSession!==undefined && Android!==undefined) {
  setTimeout(function(){ 
- 
+   try {
    Android.loadAndroidWebScreen("LOAD_STARTUP","#0ba0da"); 
+   } catch(err){ alert(err); }
  /*
   try {
    var AUTH_USER_ID = AndroidSession.getAndroidSession("AUTH_USER_ID");

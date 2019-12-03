@@ -32,7 +32,7 @@ import anups.upsc.prep.util.NewGPSTracker;
 import anups.upsc.prep.util.PropertyUtility;
 import anups.upsc.prep.web.templates.URLGenerator;
 
-public class AppManagement extends Activity {
+public class AppManagement {
   org.apache.log4j.Logger logger = AndroidLogger.getLogger(AppManagement.class);
 	Context mContext;
 	public AppManagement(Context c) {  mContext = c; }
@@ -42,7 +42,7 @@ public class AppManagement extends Activity {
 	  logger.info("loadProjectPropertiesFile (Javascript)...");
 	  try {
         AppSessionManagement appSessionManagement = new AppSessionManagement(mContext);
-	    PropertyUtility propertyUtility = new PropertyUtility(this.getApplicationContext());
+	    PropertyUtility propertyUtility = new PropertyUtility(mContext);
 	    String propertyFile = propertyUtility.initializePropertyFile(appSessionManagement);
 		       propertyUtility.readPropertyFile(appSessionManagement, propertyFile);
       } catch(Exception e){
@@ -160,9 +160,11 @@ public class AppManagement extends Activity {
 	public void goToAppPermissions(){
 		Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS, 
 			      Uri.parse("package:" + mContext.getPackageName()));
-			  intent.addCategory(Intent.CATEGORY_DEFAULT);
-			  intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-			  mContext.startActivity(intent);
+		intent.addCategory(Intent.CATEGORY_DEFAULT);
+	    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+	    try {
+	    mContext.startActivity(intent);
+	    } catch(Exception e) { Toast.makeText(mContext, e.getMessage(), Toast.LENGTH_SHORT).show(); }
 	}
 	
 	@JavascriptInterface
@@ -174,14 +176,15 @@ public class AppManagement extends Activity {
 	
 	@JavascriptInterface
 	public void loadAndroidWebScreen(String directURL, String activityColor){
+		try {
 		Intent intent = new Intent(mContext, AndroidWebScreen.class);
 		 //  intent.setData(Uri.parse(directURL));
 		   intent.putExtra("COLOR", activityColor);
 		   intent.putExtra("URL",directURL);
+		   intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 		mContext.startActivity(intent);
+		} catch(Exception e){ }
 	}
-	
-	
 	
 	@JavascriptInterface
 	public int getAndroidVersion(){
