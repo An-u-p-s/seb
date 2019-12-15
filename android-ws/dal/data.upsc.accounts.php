@@ -9,6 +9,10 @@ class UpscAccounts{
   $sql="SELECT * FROM user_accounts WHERE email='".$email."' AND acc_pwd='".$acc_pwd."';";
   return $sql;
  }
+ function query_validate_accountEmail($email){
+  $sql="SELECT * FROM user_accounts WHERE email='".$email."';";
+  return $sql;
+ }
  function query_update_accountInfo($account_Id, $name, $email, $acc_pwd, $prep_plan_year){
   $sql="UPDATE user_accounts SET";
   if(strlen($name)>0){ $sql.=" name='".$name."',"; }

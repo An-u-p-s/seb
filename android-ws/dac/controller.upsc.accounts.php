@@ -33,5 +33,11 @@ $upscAccounts = new UpscAccounts();
     $query = $upscAccounts->query_view_accountInfo($email, $acc_pwd);
 	echo $database->getJSONData($query);
 	
+ } else if($_GET["action"]=='validate'){
+ 
+	$email=$_GET["email"];
+    $query = $upscAccounts->query_validate_accountEmail($email);
+	echo $database->getJSONData($query);
+	
  }
  else { echo 'MISSING_ACTION'; }
