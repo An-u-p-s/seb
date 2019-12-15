@@ -179,7 +179,10 @@ public void onRequestPermissionsResult(int requestCode, String[] permissions, in
         default:
             super.onRequestPermissionsResult(requestCode, permissions, grantResults);
      }
+	  
 		if(permissionDenied){
+			// permissionsExist();
+			/*
 			 // Permission Denied
 	    	boolean showPermissionRationale=this.shouldShowRequestPermissionRationale(permissions[index]);
 	    	if(!showPermissionRationale){
@@ -214,7 +217,7 @@ public void onRequestPermissionsResult(int requestCode, String[] permissions, in
 	    		AlertDialog alertDialog = builder.create();
 	    		alertDialog.show();
 	    	}
-	    
+	        */
 		}
   }
 
@@ -227,12 +230,15 @@ public void onRequestPermissionsResult(int requestCode, String[] permissions, in
 @SuppressLint("SetJavaScriptEnabled")
 @Override
 protected void onCreate(Bundle savedInstanceState) {
-// logger.info("MyLocalHook Activity Container Created...");
- Toast.makeText(this, "MyLocalHook Activity Container Created...", Toast.LENGTH_SHORT).show();
  super.onCreate(savedInstanceState);
  requestWindowFeature(Window.FEATURE_NO_TITLE);
  setTitle(R.string.app_name);
  setContentView(R.layout.activity_androidwebscreen);
+ 
+ /* On Startup - Steps to be followed */
+ 
+ 
+ /* On Startup - Steps to be followed */
  
  Intent intent = getIntent();
  Uri data = intent.getData();
@@ -346,11 +352,14 @@ protected void onCreate(Bundle savedInstanceState) {
      		   directURL = extras.getString("URL"); 
      		   if("LOAD_STARTUP".equalsIgnoreCase(directURL)){
      			  Toast.makeText(this, "permissionsExist: "+permissionsExist(), Toast.LENGTH_LONG);
+     			  String path = "http://192.168.1.4/upn/android-core/android-upsc-prep-net/assets/www/";
      			  if(!permissionsExist()){
-     	        	directURL="file:///android_asset/www/app-init-permissions.html";
+     	        	// directURL="file:///android_asset/www/app-init-permissions.html";
+     				 directURL= path + "app-init-permissions.html";
      	          } 
      			  else { // if(USER_ID==null) 
-     				 directURL= "file:///android_asset/www/app-auth-welcome.html";   
+     				//  directURL= "file:///android_asset/www/app-auth-welcome.html";   
+     				 directURL= path + "app-auth-welcome.html";
      	          }
      		   }
      	    }

@@ -12,9 +12,8 @@ public class AppPermissions extends Activity {
   public AppPermissions(Context c) {  mContext = c; }
 	
   @JavascriptInterface
-  public String doesPermissionExist(String permission){ 
-   boolean status=((AndroidWebScreen) mContext).doesPermissionExist(permission);
-   return Boolean.toString(status);
+  public boolean doesPermissionExist(String permission){ 
+   return ((AndroidWebScreen) mContext).doesPermissionExist(permission);
   }
 	
   @JavascriptInterface

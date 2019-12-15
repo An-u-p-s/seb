@@ -7,7 +7,7 @@ import java.io.Reader;
 import java.io.StringWriter;
 import java.io.Writer;
 import java.util.Arrays;
-
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.Context;
@@ -15,6 +15,7 @@ import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.res.AssetManager;
+import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.provider.Settings;
 import android.webkit.JavascriptInterface;
@@ -23,6 +24,7 @@ import anups.upsc.prep.app.AndroidWebScreen;
 import anups.upsc.prep.constants.BusinessConstants;
 import anups.upsc.prep.media.AndroidWebScreenVideo;
 import anups.upsc.prep.notify.ws.FilesTransactionService;
+import anups.upsc.prep.startup.InitDatabase;
 import anups.upsc.prep.util.AndroidLogger;
 import anups.upsc.prep.util.CRUDContacts;
 import anups.upsc.prep.util.FilesTransactionUtility;
@@ -37,6 +39,14 @@ public class AppManagement {
 	Context mContext;
 	public AppManagement(Context c) {  mContext = c; }
 
+	@JavascriptInterface
+	public void dbLogic(int version){
+		InitDatabase initDatabase = new InitDatabase(mContext,version);
+		SQLiteDatabase sqliteDatabase = initDatabase.getWritableDatabase(); // invokes
+		// sqliteDatabase.getVersion();
+		logger.info("DatabaseName: "+sqliteDatabase.getVersion());
+	}
+	
 	@JavascriptInterface
 	public void loadProjectPropertiesFile(){
 	  logger.info("loadProjectPropertiesFile (Javascript)...");

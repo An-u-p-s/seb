@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title></title>
+<title>MyLocalHook</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles/api/bootstrap.min.css"/>
+  <link rel="stylesheet" href="styles/api/font-awesome.min.css"/>
+  <link rel="stylesheet" href="styles/api/jquery-ui.css"/>
+  <link rel="stylesheet" href="styles/api/core-skeleton.css"/>
+  <link rel="stylesheet" href="styles/api/bootstrap-toggle.min.css"/>
+  <script src="js/api/jquery.min.js"></script>
+  <script src="js/api/jquery-ui.js"></script>
+  <script src="js/api/bootstrap.min.js"></script>
+  <script src="js/api/bootstrap-advanced.js"></script>
+  <script src="js/api/bootstrap-toggle.min.js"></script>
+  <script src="js/api/core-skeleton.js"></script>
+<style>
+.fs12 { font-size:12px; }
+.hr-red { border-color: red; }
+.pad0 { padding: 0px; }
+.mbot0 { margin-bottom:0px; }
+.mtop5p { margin-top: 5px; }
+.mtop10p { margin-top: 10px; }
+.mtop15p { margin-top: 15px; }
+.mbot15p { margin-bottom: 15px; }
+.mtop35p { margin-top: 35px; }
+.mtop65p { margin-top: 65px; }
+.hide-block { display: none; }
+.font-red { color: red; }
+.font-green { color:green; }
+.font-grey { color:#555; }
+.font-mdm-grey { color:#666; }
+.font-lgt-grey { color:#ccc; }
+code { font-weight: bold;font-size: 11px; }
+hr { margin-bottom: 10px; }
+.bg-grey { background-color:#f5f5f5; }
+.mtop65p { margin-top:85px; }
+
+.label { border-radius:0px; }
+.progress { margin-top:6px;height:5px;margin-bottom:0px; }
+
+.padtop5 { padding-top:5px; }
+.padbot5 { padding-bottom:5px; }
+.label-primary>.badge { color:#33c9a7;background-color:#fff; }
+
+
+.lang-tag { position:relative;width:100%;height:50px; }
+.lang-tag-icon{ background-color:#f5f5f5;position:absolute;width:40px;height:40px;border-radius:50%;z-index:1; }
+.lang-tag-text { text-align:center;font-weight:bold;padding-top:5px;color:mediumSeaGreen;background-color:#fff;position:absolute;margin-left:25px;margin-top:5px;width:90%;height:auto;border-top-right-radius:15px;border-bottom-right-radius:15px; }
+
+</style>
+<script type="text/javascript">
+ var specialKeys = new Array();
+ specialKeys.push(8); //Backspace
+ function IsNumeric(e) {
+ alert(e);
+  var keyCode = e.which ? e.which : e.keyCode;
+  var ret = ((keyCode >= 48 && keyCode <= 57) || specialKeys.indexOf(keyCode) != -1);
+  alert(ret);
+  return ret;
+ }
+</script>
+</head>
+<body>
+<div align="center" class="container-fluid">
+  <img src="images/logo.jpg" class="app-icon-s3"/>
+</div>
+
+<!-- -->
+<div class="list-group">
+<div align="center" class="list-group-item" style="border-radius:0px;background-color:#9C27B0;color:#fff;"><b>Plan your UPSC Exam Preparation</b></div>
+</div><!--/.list-group -->
+<!-- -->
+
+<!-- -->
+<div class="container-fluid">
+<div class="row">
+<div align="center" class="col-xs-12">
+<!-- -->
+<b></b>
+<!-- -->
+</div><!--/.col-xs-12 -->
+</div><!--/.row -->
+</div><!--/.container-fluid -->
+
+<!-- -->
+<div class="container-fluid">
+<div class="row">
+<div align="center" class="col-xs-12"><b>Set your Goal to Crack UPSC Exam</b></div>
+</div><!--/.row -->
+<div class="row mtop15p">
+<div class="col-xs-2"></div>
+<div class="col-xs-8">
+
+<div class="input-group">
+<select class="form-control" style="border:2px solid #1188e6;">
+<option value="">Select Year</option>
+<option value="">2020</option>
+<option value="">2021</option>
+<option value="">2022</option>
+<option value="">2023</option>
+</select>
+<span class="input-group-addon" style="background-color:#1188e6;color:#fff;font-weight:bold;border:1px solid #1188e6;">Done</span>
+</div><!--/.input-group -->
+</div><!--/.col-xs-8 -->
+<div class="col-xs-2"></div>
+</div><!--/.row -->
+
+</div><!--/.container-fluid -->
+<!-- -->
+
+<div class="container-fluid mtop15p font-green">
+<div class="row">
+<div align="right" class="col-xs-12">
+<i class="fa fa-check-circle"></i>&nbsp;
+<b>Notification Released</b>
+</div><!--/.col-xs-12 -->
+</div><!--/.row -->
+<div class="row">
+<div class="col-xs-12">
+<div class="table-responsive">
+<table class="table" style="">
+<tbody>
+<tr>
+<td><b>Notification Released</b></td>
+<td><b>Feb 04 2020</b></td>
+</tr>
+<tr>
+<td><b>Preliminary Examination</b></td>
+<td><b>May 31 2020</b></td>
+</tr>
+<tr>
+<td><b>Mains Examination</b></td>
+<td><b>May 31 2020</b></td>
+</tr>
+</tbody>
+</table>
+</div><!--/.table-responsive -->
+</div><!--/.col-xs-12 -->
+</div><!--/.row -->
+</div><!--/.container-fluid -->
+
+<div class="container-fluid mtop15p font-red">
+<div class="row">
+<div align="right" class="col-xs-12">
+<i class="fa fa-check-circle"></i>&nbsp;
+<b>Notification not released</b>
+</div><!--/.col-xs-12 -->
+</div><!--/.row -->
+<div class="row">
+<div class="col-xs-12">
+<div class="table-responsive">
+<table class="table" style="">
+<tbody>
+<tr>
+<td><b>Notification Release</b></td>
+<td><b>Feb 2020 &nbsp;<span class="label label-danger">Expected</span></b></td>
+</tr>
+<tr>
+<td><b>Preliminary Examination</b></td>
+<td><b>May 2020 &nbsp;<span class="label label-danger">Expected</span></b></td>
+</tr>
+<tr>
+<td><b>Mains Examination</b></td>
+<td><b>May 2020 &nbsp;<span class="label label-danger">Expected</span></b></td>
+</tr>
+</tbody>
+</table>
+</div><!--/.table-responsive -->
+</div><!--/.col-xs-12 -->
+</div><!--/.row -->
+</div><!--/.container-fluid -->
+
+<!-- -->
+<div class="container-fluid mtop15p">
+<div class="row">
+<div class="col-xs-3"></div>
+<div align="center" class="col-xs-6">
+<!-- -->
+<button class="btn btn-default form-control"><b>Next</b></button>
+<!-- -->
+</div><!--/.col-xs-6 -->
+<div class="col-xs-3"></div>
+</div><!--/.row -->
+</div><!--/.container-fluid -->
+
+<!-- -->
+<div class="container-fluid mtop65p">
+
+<div class="row">
+<div class="col-xs-12">
+<!-- -->
+<div align="center"><b>Set your Time to contribute 
+for the course in a day</b></div>
+<!-- -->
+</div><!--/.col-xs-12 -->
+</div><!--/.row -->
+
+<div class="row mtop15p">
+<div class="col-xs-2 mtop5p"><b>SAT</b></div>
+<div class="col-xs-4">
+<select class="form-control">
+<option value="">Hours</option>
+<option value="">1 hour</option>
+<option value="">2 hours</option>
+<option value="">3 hours</option>
+<option value="">4 hours</option>
+<option value="">5 hours</option>
+<option value="">6 hours</option>
+<option value="">7 hours</option>
+<option value="">8 hours</option>
+<option value="">9 hours</option>
+<option value="">10 hours</option>
+<option value="">11 hours</option>
+<option value="">12 hours</option>
+<option value="">13 hours</option>
+<option value="">14 hours</option>
+</select>
+</div><!--/.col-xs-4 -->
+<div class="col-xs-2 mtop5p"><b>SUN</b></div>
+<div class="col-xs-4">
+<select class="form-control">
+<option value="">Hours</option>
+<option value="">1 hour</option>
+<option value="">2 hours</option>
+<option value="">3 hours</option>
+<option value="">4 hours</option>
+<option value="">5 hours</option>
+<option value="">6 hours</option>
+<option value="">7 hours</option>
+<option value="">8 hours</option>
+<option value="">9 hours</option>
+<option value="">10 hours</option>
+<option value="">11 hours</option>
+<option value="">12 hours</option>
+<option value="">13 hours</option>
+<option value="">14 hours</option>
+</select>
+</div><!--/.col-xs-4 -->
+</div><!--/.row -->
+
+<div class="row mtop15p">
+<div class="col-xs-2 mtop5p"><b>MON</b></div>
+<div class="col-xs-4">
+<select class="form-control">
+<option value="">Hours</option>
+<option value="">1 hour</option>
+<option value="">2 hours</option>
+<option value="">3 hours</option>
+<option value="">4 hours</option>
+<option value="">5 hours</option>
+<option value="">6 hours</option>
+<option value="">7 hours</option>
+<option value="">8 hours</option>
+<option value="">9 hours</option>
+<option value="">10 hours</option>
+<option value="">11 hours</option>
+<option value="">12 hours</option>
+<option value="">13 hours</option>
+<option value="">14 hours</option>
+</select>
+</div><!--/.col-xs-4 -->
+<div class="col-xs-2 mtop5p"><b>TUE</b></div>
+<div class="col-xs-4">
+<select class="form-control">
+<option value="">Hours</option>
+<option value="">1 hour</option>
+<option value="">2 hours</option>
+<option value="">3 hours</option>
+<option value="">4 hours</option>
+<option value="">5 hours</option>
+<option value="">6 hours</option>
+<option value="">7 hours</option>
+<option value="">8 hours</option>
+<option value="">9 hours</option>
+<option value="">10 hours</option>
+<option value="">11 hours</option>
+<option value="">12 hours</option>
+<option value="">13 hours</option>
+<option value="">14 hours</option>
+</select>
+</div><!--/.col-xs-4 -->
+</div><!--/.row -->
+
+<div class="row mtop15p">
+<div class="col-xs-2 mtop5p"><b>WED</b></div>
+<div class="col-xs-4">
+<select class="form-control">
+<option value="">Hours</option>
+<option value="">1 hour</option>
+<option value="">2 hours</option>
+<option value="">3 hours</option>
+<option value="">4 hours</option>
+<option value="">5 hours</option>
+<option value="">6 hours</option>
+<option value="">7 hours</option>
+<option value="">8 hours</option>
+<option value="">9 hours</option>
+<option value="">10 hours</option>
+<option value="">11 hours</option>
+<option value="">12 hours</option>
+<option value="">13 hours</option>
+<option value="">14 hours</option>
+</select>
+</div><!--/.col-xs-4 -->
+<div class="col-xs-2 mtop5p"><b>THUR</b></div>
+<div class="col-xs-4">
+<select class="form-control">
+<option value="">Hours</option>
+<option value="">1 hour</option>
+<option value="">2 hours</option>
+<option value="">3 hours</option>
+<option value="">4 hours</option>
+<option value="">5 hours</option>
+<option value="">6 hours</option>
+<option value="">7 hours</option>
+<option value="">8 hours</option>
+<option value="">9 hours</option>
+<option value="">10 hours</option>
+<option value="">11 hours</option>
+<option value="">12 hours</option>
+<option value="">13 hours</option>
+<option value="">14 hours</option>
+</select>
+</div><!--/.col-xs-4 -->
+</div><!--/.row -->
+
+<div class="row mtop15p">
+<div class="col-xs-2 mtop5p"><b>FRI</b></div>
+<div class="col-xs-4">
+<select class="form-control">
+<option value="">Hours</option>
+<option value="">1 hour</option>
+<option value="">2 hours</option>
+<option value="">3 hours</option>
+<option value="">4 hours</option>
+<option value="">5 hours</option>
+<option value="">6 hours</option>
+<option value="">7 hours</option>
+<option value="">8 hours</option>
+<option value="">9 hours</option>
+<option value="">10 hours</option>
+<option value="">11 hours</option>
+<option value="">12 hours</option>
+<option value="">13 hours</option>
+<option value="">14 hours</option>
+</select>
+</div><!--/.col-xs-4 -->
+<div class="col-xs-6">
+
+</div><!--/.col-xs-6 -->
+</div><!--/.row -->
+<div class="row">
+<div class="col-xs-1"></div>
+<div class="col-xs-10">
+<!-- -->
+<div class="list-group mtop15p">
+<div class="list-group-item">
+<b>Total Hrs/weeks : &nbsp;&nbsp;&nbsp;<span>0</span></b>
+</div><!--/.list-group-item -->
+</div><!--/.list-group -->
+<!-- -->
+</div><!--/.col-xs-12 -->
+</div><!--/.row -->
+</div><!--/.container-fluid -->
+
+<!-- -->
+<div class="container-fluid mtop15p">
+<div class="row">
+<div class="col-xs-3"></div>
+<div align="center" class="col-xs-6">
+<!-- -->
+<button class="btn btn-default form-control"><b>Next</b></button>
+<!-- -->
+</div><!--/.col-xs-6 -->
+<div class="col-xs-3"></div>
+</div><!--/.row -->
+</div><!--/.container-fluid -->
+
+<div class="container-fluid">
+<div class="row mtop15p">
+
+<div class="col-xs-6">
+
+</div>
+<div class="col-xs-6">
+<!-- -->
+<div class="list-group">
+<div align="center" class="list-group-item">
+<b>Crack UPSC 2020</b>
+</div><!--/.list-group-item -->
+<div align="center" class="list-group-item" style="font-weight:bold;">
+<span style="font-size:28px;">12020</span>&nbsp;<span>hours</span>
+</div><!--/.list-group-item -->
+<div align="center" class="list-group-item">
+<b>Remaining</b>
+</div><!--/.list-group-item -->
+</div><!--/.list-group -->
+<!-- -->
+</div><!--/.col-xs-6 -->
+
+</div><!--/.row -->
+
+</div><!--/.container-fluid -->
+<!-- -->
+
+</body>
+</html>

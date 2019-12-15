@@ -1,10 +1,13 @@
 class HtmlCore {
- progressbar(count,type){
-  return ('<div class="progress" style="height:5px;">'+'<div class="progress-bar progress-bar-'+type+' progress-bar-striped" '
-        +'role="progressbar" aria-valuenow="'+count+'" '
-        +'aria-valuemin="0" aria-valuemax="100" style="width:'+count+'%">'
-        +'<span class="sr-only">'+count+'% Complete</span>'
-        +'</div></div>');
+ progressbar(count,type, size, msg){
+  var content ='<div class="progress" style="height:'+size+'px;">'+'<div class="progress-bar progress-bar-'+type+' progress-bar-striped" '
+     +'role="progressbar" aria-valuenow="'+count+'" '
+     +'aria-valuemin="0" aria-valuemax="100" style="width:'+count+'%">';
+	if(msg!==undefined){
+      content+='&nbsp;<b>'+count+'%</b>';
+    }
+    content+='</div></div>';
+	return content;
  }
 }
 class AppCommons {

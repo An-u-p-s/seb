@@ -4,7 +4,7 @@ function progressLoader(){
  var count=1;
  var progress=false; /* true - 100 to 1 false - 1 to 100 */
  setInterval(function(){ 
-  document.getElementById("progressDisplay").innerHTML=htmlCore.progressbar(count,'orange');
+  document.getElementById("progressDisplay").innerHTML=htmlCore.progressbar(count,'orange',5);
   if(progress==false){ count++; }
   else {  count--; }
   if(count>1 && count>=100){ progress=true; }
@@ -14,7 +14,6 @@ function progressLoader(){
 
 $(document).ready(function(){
  progressLoader();
- Android.showToast(AndroidSession+" "+Android);
  if(AndroidSession!==undefined && Android!==undefined) {
  setTimeout(function(){ 
    try {
