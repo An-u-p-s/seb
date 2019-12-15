@@ -5,8 +5,8 @@ var AndroidDatabase;
 var AndroidSQLiteUsrFrndsInfo;
 function goToNext(){
 if(Android!==undefined){  // Android.loadAndroidWebScreen('AUTH','#095d59'); 
-window.location.href='app-init-config.html';
- //Android.loadAndroidWebScreen('DEFAULT'); file:///android_asset/www/ 
+ window.location.href='app-init-permissions.html';
+ // Android.loadAndroidWebScreen('DEFAULT'); file:///android_asset/www/ 
 }
 }
 function makeOutPermissions(){ 

@@ -354,12 +354,12 @@ protected void onCreate(Bundle savedInstanceState) {
      			  Toast.makeText(this, "permissionsExist: "+permissionsExist(), Toast.LENGTH_LONG);
      			  String path = "http://192.168.1.4/upn/android-core/android-upsc-prep-net/assets/www/";
      			  if(!permissionsExist()){
-     	        	// directURL="file:///android_asset/www/app-init-permissions.html";
-     				 directURL= path + "app-init-permissions.html";
+     	        	 directURL="file:///android_asset/www/app-init-permissions.html";
+     				// directURL= path + "app-init-permissions.html";
      	          } 
      			  else { // if(USER_ID==null) 
-     				//  directURL= "file:///android_asset/www/app-auth-welcome.html";   
-     				 directURL= path + "app-auth-welcome.html";
+     			     directURL= "file:///android_asset/www/app-auth-welcome.html";   
+     				// directURL= path + "app-auth-welcome.html";
      	          }
      		   }
      	    }
