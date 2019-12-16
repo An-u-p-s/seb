@@ -32,8 +32,13 @@
 				<category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-         <activity
-            android:name="anups.upsc.prep.app.AndroidWebScreen"></activity>
+         <activity android:name="anups.upsc.prep.app.AndroidWebScreen"></activity>
+         <service android:name="anups.upsc.prep.services.BackgroundService" android:enabled="true" android:exported="false"/> 
+         <receiver android:name="anups.upsc.prep.br.OnBootBroadcastReceiver" android:enabled="true" android:exported="true">
+             <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+         </receiver>
     </application>
 
 </manifest>
