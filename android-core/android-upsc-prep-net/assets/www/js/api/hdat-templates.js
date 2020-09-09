@@ -10,6 +10,36 @@ class HtmlCore {
 	return content;
  }
 }
+
+class SideWrapper {
+ displayMenu(id, act){
+  var content='<div><ul class="sidebar-nav f12p font-white">';
+      content+='<div align="center" class="sidebar-nav-profile">';
+	  content+='<div><img src="images/upsc-mediumBlue.jpg" class="app-icon-s3"/></div>';
+      content+='<a href="#">';
+	  content+='<div class="list-group mtop15p">';
+	  content+='<div class="list-group-item">';
+	  content+='<div class="sidebar-wrapper-img mtop25p"></div>';
+	  content+='<div align="center" class="font-black"><b>FirstName LastName</b></div>';
+	  content+='<div align="center" class="f11p font-grey"><b>Locality, Location, State, Country</b></div>';
+      content+='</a>';
+	  
+	  content+='</div>';
+	  content+='</div>';
+	  
+      content+='</div>';
+      content+='<li id="sm-aboutUpscExam"><a href="app-user-aboutUpscExam.html" class="font-white"><i class="fa fa-dashboard" aria-hidden="true"></i>&nbsp;&nbsp;<span><b>About UPSC Exam</b></span></a></li>';	
+      content+='<li id="sm-syllabus"><a href="#" class="font-white"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;<span><b>Syllabus</b></span></a></li>';
+      content+='<li id="sm-home"><a href="app-user-home.html" class="font-white"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;<span><b>Home</b></span></a></li>';
+	  content+='</ul></div>';
+	document.getElementById(id).innerHTML = content;
+	if(!$('#'+act).hasClass('active')){ 
+	  $('#'+act).addClass('active'); 
+	  if($('#'+act+'>a').hasClass('font-white')){ $('#'+act+'>a').addClass('font-black'); }
+	}
+ }
+}
+
 class AppCommons {
   appInitHeader(){
     return ('<div><nav class="navbar custom-bg"><div class="container-fluid"><div class="navbar-header">'
@@ -29,3 +59,4 @@ class AppAuth {
 var htmlCore = new HtmlCore();
 var appCommons = new AppCommons();
 var appAuth = new AppAuth();
+var sideWrapper = new SideWrapper();

@@ -347,7 +347,9 @@ protected void onCreate(Bundle savedInstanceState) {
        	    logger.info("extras: "+extras);
        	    logger.info("data: "+data);
        	   
-        	String directURL="file:///android_asset/www/app-init-default.html";
+        	// String directURL="file:///android_asset/www/app-init-default.html";
+       	 String directURL="file:///android_asset/www/app-auth-welcome.html";
+       	 /*
         	if(extras!=null){
      		   directURL = extras.getString("URL"); 
      		   if("LOAD_STARTUP".equalsIgnoreCase(directURL)){
@@ -366,7 +368,7 @@ protected void onCreate(Bundle savedInstanceState) {
         	
         	logger.info("directURL: "+directURL);
         	
-        	
+        	*/
         	 
         	// logger.info("Recieve Intent Status: "+extras);
         	 	

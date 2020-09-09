@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title></title>
+<title>MyLocalHook</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles/api/bootstrap.min.css"/>
+  <link rel="stylesheet" href="styles/api/font-awesome.min.css"/>
+  <link rel="stylesheet" href="styles/api/jquery-ui.css"/>
+  <link rel="stylesheet" href="styles/api/core-skeleton.css"/>
+  <link rel="stylesheet" href="styles/api/bootstrap-toggle.min.css"/>
+  <script src="js/api/jquery.min.js"></script>
+  <script src="js/api/jquery-ui.js"></script>
+  <script src="js/api/bootstrap.min.js"></script>
+  <script src="js/api/bootstrap-advanced.js"></script>
+  <script src="js/api/bootstrap-toggle.min.js"></script>
+  <script src="js/api/core-skeleton.js"></script>
+<style>
+.btn-orange-o { border:2px solid #fc0f0f;color:#fc0f0f;background-color:#fff; }
+.fs12 { font-size:12px; }
+.hr-red { border-color: red; }
+.pad0 { padding: 0px; }
+.mbot0 { margin-bottom:0px; }
+.mbot15p { margin-bottom:15px; }
+.mtop5p { margin-top: 5px; }
+.mtop10p { margin-top: 10px; }
+.mbot5p { margin-bottom:5px; }
+.mtop15p { margin-top: 15px; }
+</style>
+<script type="text/javascript">
+$(document).ready(function(){
+  generateHours(["time_sat","time_sun","time_mon","time_tue","time_wed","time_thur","time_fri"]);
+});
+function generateHours(ids){
+ var content = '<option value="0">Select Hours</option>';
+ for(var index=1;index<=14;index++){
+   if(index===1){ content+='<option>'+index+' Hour</option>'; }
+   else { content+='<option value="'+index+'">'+index+' Hours</option>'; }
+ }
+ for(var i in ids){ document.getElementById(ids[i]).innerHTML = content; }
+}
+function calculateTotalHours(){
+ var total = '0 Hours';
+ var sat = parseInt(document.getElementById("time_sat").value);
+ var sun = parseInt(document.getElementById("time_sun").value);
+ var mon = parseInt(document.getElementById("time_mon").value);
+ var tue = parseInt(document.getElementById("time_tue").value);
+ var wed = parseInt(document.getElementById("time_wed").value);
+ var thur = parseInt(document.getElementById("time_thur").value);
+ var fri = parseInt(document.getElementById("time_fri").value);
+ hr = sat+sun+mon+tue+wed+thur+fri;
+ if(hr == 1){ total = '1 Hour'; }
+ else { total = hr+' Hours'; }
+ document.getElementById("displaySpendTime").innerHTML = total;
+}
+</script>
+</head>
+<body>
+<div align="center" class="container-fluid mtop5p mbot5p">
+  <img src="images/logo.jpg" class="app-icon-s3"/>
+</div>
+
+<!-- -->
+<div class="list-group mtop5p">
+<div align="center" class="list-group-item" style="border-radius:0px;background-color:#fc0f0f;color:#fff;"><b>Plan your UPSC Exam Preparation</b></div>
+</div><!--/.list-group -->
+<!-- -->
+
+<!-- -->
+<div class="container-fluid">
+
+<div class="row">
+<div class="col-xs-12">
+<!-- -->
+<div align="center"><b>Set your Time to contribute 
+for the course in a day</b></div>
+<!-- -->
+</div><!--/.col-xs-12 -->
+</div><!--/.row -->
+
+<div class="row mtop15p">
+<div class="col-xs-2 mtop5p"><b>SAT</b></div>
+<div class="col-xs-10">
+<select id="time_sat" class="form-control" onchange="javascript:calculateTotalHours();"></select>
+</div><!--/.col-xs-10 -->
+</div><!--/.row -->
+
+<div class="row mtop15p">
+<div class="col-xs-2 mtop5p"><b>SUN</b></div>
+<div class="col-xs-10">
+<select id="time_sun" class="form-control" onchange="javascript:calculateTotalHours();"></select>
+</div><!--/.col-xs-10 -->
+</div><!--/.row -->
+
+<div class="row mtop15p">
+<div class="col-xs-2 mtop5p"><b>MON</b></div>
+<div class="col-xs-10">
+<select id="time_mon" class="form-control" onchange="javascript:calculateTotalHours();"></select>
+</div><!--/.col-xs-10 -->
+</div><!--/.row -->
+
+<div class="row mtop15p">
+<div class="col-xs-2 mtop5p"><b>TUE</b></div>
+<div class="col-xs-10">
+<select id="time_tue" class="form-control" onchange="javascript:calculateTotalHours();"></select>
+</div><!--/.col-xs-10 -->
+</div><!--/.row -->
+
+<div class="row mtop15p">
+<div class="col-xs-2 mtop5p"><b>WED</b></div>
+<div class="col-xs-10">
+<select id="time_wed" class="form-control" onchange="javascript:calculateTotalHours();"></select>
+</div><!--/.col-xs-10 -->
+</div><!--/.row -->
+
+<div class="row mtop15p">
+<div class="col-xs-2 mtop5p"><b>THUR</b></div>
+<div class="col-xs-10">
+<select id="time_thur" class="form-control" onchange="javascript:calculateTotalHours();"><select>
+</div><!--/.col-xs-10 -->
+</div><!--/.row -->
+
+<div class="row mtop15p">
+<div class="col-xs-2 mtop5p"><b>FRI</b></div>
+<div class="col-xs-10">
+<select id="time_fri" class="form-control" onchange="javascript:calculateTotalHours();"></select>
+</div><!--/.col-xs-10 -->
+</div><!--/.row -->
+
+<div class="row">
+<div class="col-xs-1"></div>
+<div class="col-xs-10">
+<!-- -->
+<div class="list-group mtop15p">
+<div class="list-group-item">
+<b>Total Hrs/weeks : &nbsp;&nbsp;&nbsp;<span id="displaySpendTime">0 Hours</span></b>
+</div><!--/.list-group-item -->
+</div><!--/.list-group -->
+<!-- -->
+</div><!--/.col-xs-12 -->
+</div><!--/.row -->
+</div><!--/.container-fluid -->
+
+<!-- -->
+<div class="container-fluid">
+<div class="row">
+<div class="col-xs-3"></div>
+<div align="center" class="col-xs-6">
+<!-- -->
+<a href="app-user-home.html">
+<button class="btn btn-orange-o form-control mbot15p" onclick="javascript:saveTimeSchedule();"><b>Save</b></button>
+</a>
+<!-- -->
+</div><!--/.col-xs-6 -->
+<div class="col-xs-3"></div>
+</div><!--/.row -->
+</div><!--/.container-fluid -->
+
+</body>
+</html>

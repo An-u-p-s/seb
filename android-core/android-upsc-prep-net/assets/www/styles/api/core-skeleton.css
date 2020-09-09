@@ -1,6 +1,7 @@
 /* Google Map */
 .gm-style>.gmnoprint, .gm-style>.gmnoprint.gm-style-cc,.gm-style>.gm-style-cc { display:none; }
 a[target="_blank"]>div>img { display:none; }
+#sidebar-wrapper { background-color:#02629e; }
 /**/
 /*
 body::-webkit-scrollbar-track,ul.list-inline::-webkit-scrollbar-track, .div-list-scroll::-webkit-scrollbar-track { 

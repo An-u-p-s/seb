@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>MyLocalHook</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles/api/bootstrap.min.css"/>
+  <link rel="stylesheet" href="styles/api/font-awesome.min.css"/>
+  <link rel="stylesheet" href="styles/api/jquery-ui.css"/>
+  <link rel="stylesheet" href="styles/api/core-skeleton.css"/>
+  <link rel="stylesheet" href="styles/api/bootstrap-toggle.min.css"/>
+  <link rel="stylesheet" href="styles/api/simple-sidebar.css"/>
+  <script src="js/api/jquery.min.js"></script>
+  <script src="js/api/jquery-ui.js"></script>
+  <script src="js/api/bootstrap.min.js"></script>
+  <script src="js/api/bootstrap-advanced.js"></script>
+  <script src="js/api/bootstrap-toggle.min.js"></script>
+  <script src="js/api/core-skeleton.js"></script>
+  <script src="js/api/hdat-templates.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  sideWrapperToggle();
+});
+$(document).ready(function(){
+ sideWrapper.displayMenu("sidebar-wrapper","sm-aboutUpscExam");
+ mlh_homepage_selMenu("mlh-homepage-menulist-home");
+});
+function mlh_homepage_selMenu(sel_Id){
+bootstrap_menu_trigger({"mlh-homepage-menulist-home":{ "contents":["mlh-homepage-menucontent-home"],"functions":function(){ } },
+"mlh-homepage-menulist-mylocation":{ "contents":["mlh-homepage-menucontent-mylocation"],"functions":function(){ } },
+"mlh-homepage-menulist-newsfeed":{ "contents":["mlh-homepage-menucontent-newsfeed"],"functions":function(){ } },
+"mlh-homepage-menulist-mylocalhook":{ "contents":["mlh-homepage-menucontent-mylocalhook"],"functions":function(){ } },
+"mlh-homepage-menulist-socialstory":{ "contents":["mlh-homepage-menucontent-socialstory"],"functions":function(){ } },
+"mlh-homepage-menulist-myusageAndEarnings":{ "contents":["mlh-homepage-menucontent-myusageAndEarnings"],"functions":function(){ } }
+}, 'list-inline',sel_Id,-1); 
+}
+</script>
+<style>
+ul.nav { font-weight:bold; }
+.pad0{ padding:0px; }
+.mtop5p { margin-top:5px; }
+.mtop10p { margin-top:10px; }
+.mtop15p { margin-top:15px; }
+.mbot0p { margin-bottom:0px; }
+.mbot15p { margin-bottom:15px; }
+.mtop35p { margin-top:35px; }
+.hide-block { display:none; }
+.font-red { color:red; }
+code{ font-weight:bold;font-size:11px; }
+hr { margin-bottom:10px; }
+table>thead>tr>td { font-weight:bold; }
+</style>
+</head>
+<body>
+
+ <div class="container-fluid pad0">
+ <div class="col-md-4 col-sm-3 mhgt0p"></div>
+ <div class="col-md-4 col-sm-6 pad0">
+ <!-- -->
+ <div id="wrapper" class="toggled">
+  <!-- Core Skeleton : Side and Top Menu style="background-color:#fecc30;" -->
+    <div id="sidebar-wrapper"></div>
+	<div id="page-content-wrapper"><!-- background-color:#e98600; -->
+	  <nav id="header_bot" class="navbar" style="background-color:#034f84;margin-bottom:0px;border-radius:0px;">
+	   <div id="applogo-header">
+		
+		<a class="navbar-brand a-custom" style="padding:13px 15px;cursor:pointer;" onclick="javascript:sideWrapperToggle();">
+		  <span class="glyphicon glyphicon-align-justify font-white"></span>
+		</a>
+		
+		<div class="container-fluid pad0">
+		
+		  <div id="div_app_logo" align="center" class="col-md-8 col-sm-6 col-xs-10 mtop8p pad0">
+		    <div style="color:#fff;margin-top:6px;"><b>Civil Service Examination Pattern</b></div>
+		  </div>
+		 
+	    </div>
+		
+       </div><!--/#applogo-header -->
+	 	
+      </nav>
+	 
+	 <!-- About UPSC Exam Content ::: Start -->
+	 <!-- -->
+<!-- -->
+
+<!-- -->
+<div class="container-fluid" style="background-color:#d5f4e6;">
+<div class="row">
+<div class="col-xs-12 mtop15p mbot15p">
+
+<!-- -->
+<div>
+This Exam consists of three stages:
+<ul>
+<li>Preliminary Examination</li>
+<li>Mains Examination</li>
+<li>Interview</li>
+</ul>
+</div>
+
+<div align="center">
+<h5><b>ELIGIBILITY CRITERIA</b></h5>
+</div>
+
+
+<div>
+<h5><b>1. Age Limit and No.of Attempts</b></h5>
+</div>
+
+<div class="table-responsive">
+<table class="table">
+<thead style="background-color:#034f84;color:#fff;">
+<tr>
+<td align="center">Category</td>
+<td align="center">Age Limit</td>
+<td align="center">No. of Attempts</td>
+</tr>
+</thead>
+<tbody style="background-color:#fff;color:#000;">
+<tr>
+<td align="center"><b>GENERAL</b></td>
+<td align="center">21 - 32 years</td>
+<td align="center">6 Attempts</td>
+</tr>
+
+<tr>
+<td align="center"><b>OBC</b></td>
+<td align="center">21 - 35 years</td>
+<td align="center">9 Attempts</td>
+</tr>
+
+<tr>
+<td align="center"><b>SC/ST</b></td>
+<td align="center">21 - 37 years</td>
+<td align="center">Unlimited Attempts in <br/> the age of 21 -37 years</td>
+</tr>
+
+</tbody>
+</table>
+</div><!--/.table-responsive -->
+
+<div>
+<h5><b>2. Educational Qualification</b></h5>
+</div>
+
+<div class="list-group">
+<div class="list-group-item">
+Candidate should be a Graduate (holding a degree) 
+in any of the Stream.
+</div><!--/.list-group-item -->
+</div><!--/.list-group -->
+
+<!-- -->
+</div><!--/.col-xs-12 -->
+</div><!--/.row -->
+</div><!--/.container-fluid -->
+
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#prelims">Preliminary</a></li>
+<li><a data-toggle="tab" href="#mains">Mains</a></li>
+<li><a data-toggle="tab" href="#interview">Interview</a></li>
+</ul>
+
+<style>
+ul.nav-tabs { background-color:#034f84; }
+ul.nav-tabs>li>a,ul.nav-tabs>li>a.hover,ul.nav-tabs>li>a.focus{ color:#fff; }
+#prelims,#mains,#interview { background-color: #d5f4e6; }
+</style>
+
+
+<div class="tab-content">
+<div id="prelims" class="tab-pane fade in active">
+<!-- -->
+<div class="list-group mbot0p">
+<div align="center" class="list-group-item" style="background-color:#d64161;border:1px solid #d64161;color:#fff;">
+<b>Preliminary Examination</b>
+</div><!--/.list-group-item -->
+</div><!--/.list-group -->
+<!-- -->
+
+<!-- -->
+<div class="container-fluid">
+<div class="row">
+<div class="col-xs-12">
+
+<div align="center">
+<h5><b>(One Day Exam - Objective Type)</b></h5>
+</div>
+
+<div align="right">
+<b>Exam Total Marks:</b> 400 Marks
+</div>
+
+</div><!--/.col-xs-12 -->
+</div><!--/.row -->
+<div class="row mtop15p">
+<div class="col-xs-12">
+<div>
+Preliminary Examination helds in a day with two papers:
+<ul>
+<li><b>Paper-I:</b> General Studies</li>
+<li><b>Paper-II:</b> Civil Services Aptitude Test (CSAT)</li>
+</ul>
+</div>
+
+<div class="table-responsive">
+<table class="table">
+<thead style="background-color:#034f84;color:#fff;">
+<tr>
+<td align="center">Papers</td>
+<td align="center">Type</td>
+<td align="center">Medium</td>
+<td align="center">Duration</td>
+<td align="center">Session</td>
+<td align="center">Questions</td>
+<td align="center">Marks</td>
+</tr>
+</thead>
+<tbody style="background-color:#fff;color:#000;">
+<tr>
+<td>
+<div><b>Paper-I:</b> General Studies</div>
+</td>
+<td align="center">Objective Type</td>
+<td align="center">
+<div>English</div>
+<div>Hindi</div>
+</td>
+<td align="center">2 hours</td>
+<td align="center">
+<div>Morning</div>
+<div>(9:30 AM to 11:30 AM)</div>
+</td>
+<td align="center">100 Questions</td>
+<td align="center">200 Marks</td>
+</tr>
+
+<tr>
+<td>
+<div><b>Paper-II:</b> Civil Services Aptitude Test (CSAT)</div>
+</td>
+<td align="center">Objective Type</td>
+<td align="center">
+<div>English</div>
+<div>Hindi</div>
+</td>
+<td align="center">2 hours</td>
+<td align="center">
+<div>Evening</div>
+<div>(2:30 PM to 4:30 PM)</div>
+</td>
+<td align="center">80 Questions</td>
+<td align="center">200 Marks</td>
+</tr>
+
+</tbody>
+</table>
+</div><!--/.table-responsive -->
+<!-- -->
+
+<div>
+<div align="center" class="mbot15p"><b>EXAM SYLLABUS</b></div>
+<div><b>Paper I - (200 marks) <span class="pull-right">Duration: Two hours</span></b></div>
+<ul>
+<li>Current events of national and international importance.</li>
+<li>History of India and Indian National Movement.</li>
+<li>Indian and World Geography-Physical, Social, Economic Geography of India and the World.</li>
+<li>Indian Polity and Governance-Constitution, Political System, Panchayati Raj, Public Policy, 
+Rights Issues, etc.</li>
+<li>Economic and Social Development-Sustainable Development, Poverty, Inclusion, 
+Demographics, Social Sector Initiatives, etc.</li>
+<li>General issues on Environmental ecology, Bio-diversity and Climate Change - that do not 
+require subject specialization.</li>
+<li>General Science.</li>
+</ul>
+<div><b>Paper II-(200 marks) <span class="pull-right">Duration : Two hours</span></b></div>
+<ul>
+<li>Comprehension</li>
+<li>Interpersonal skills including communication skills</li>
+<li>Logical reasoning and analytical ability</li>
+<li>Decision making and problem solving</li>
+<li>General mental ability</li>
+<li>Basic numeracy (numbers and their relations, orders of magnitude, etc.) (Class X level), Data 
+interpretation (charts, graphs, tables, data sufficiency etc. — Class X level)</li>
+</ul>
+</div>
+
+
+<div class="list-group">
+<div class="list-group-item">
+
+<div>
+<b>Note:</b><br/> 
+There will be penalty 
+(negative marking) for wrong answers 
+marked by a candidate in Paper-I and Paper-II.
+</div>
+
+<div class="container-fluid">
+
+<div class="row">
+<div class="col-xs-6">
+<b>Right Answer</b>
+</div><!--/.col-xs-6 -->
+<div class="col-xs-6">
+Full Marks
+</div><!--/.col-xs-6 -->
+</div><!--/.row -->
+
+<div class="row">
+<div class="col-xs-6">
+<b>Wrong Answer</b>
+</div><!--/.col-xs-6 -->
+<div class="col-xs-6">
+<div>Negative Marking</div>
+<div>((1/3) * Full Marks)</div>
+</div><!--/.col-xs-6 -->
+</div><!--/.row -->
+
+</div><!--/.container-fluid -->
+
+</div><!--/.list-group-item -->
+</div><!--/.list-group -->
+
+
+</div><!--/.col-xs-12 -->
+</div><!--/.row -->
+</div><!--/.container-fluid -->
+<!-- -->
+</div><!--/#prelims -->
+
+<div id="mains" class="tab-pane fade">
+<!-- -->
+<div class="list-group mbot0p">
+<div align="center" class="list-group-item" style="background-color:#d64161;border:1px solid #d64161;color:#fff;">
+<b>Mains Examination</b>
+</div><!--/.list-group-item -->
+</div><!--/.list-group -->
+<!-- -->
+
+
+<!-- Indian Languages ::: Start -->
+<div id="indianLanguagesModal" class="modal fade" role="dialog">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal">&times;</button>
+<h4 class="modal-title">Indian Languages</h4>
+</div>
+<div class="modal-body">
+<!-- -->
+<div class="container-fluid">
+<div class="row mtop10p">
+<div class="col-xs-6"><a href="#"><b>01. Assamese</b></a></div>
+<div class="col-xs-6"><a href="#"><b>02. Bengali</b></a></div>
+</div><!--/.row -->
+<div class="row mtop10p">
+<div class="col-xs-6"><a href="#"><b>03. Bodo</b></a></div>
+<div class="col-xs-6"><a href="#"><b>04. Dogri</b></a></div>
+</div><!--/.row -->
+<div class="row mtop10p">
+<div class="col-xs-6"><a href="#"><b>05. Gujarati</b></a></div>
+<div class="col-xs-6"><a href="#"><b>06. Hindi</b></a></div>
+</div><!--/.row -->
+<div class="row mtop10p">
+<div class="col-xs-6"><a href="#"><b>07. Kannada</b></a></div>
+<div class="col-xs-6"><a href="#"><b>08. Kashmiri</b></a></div>
+</div><!--/.row -->
+<div class="row mtop10p">
+<div class="col-xs-6"><a href="#"><b>09. Konkani</b></a></div>
+<div class="col-xs-6"><a href="#"><b>10. Maithili</b></a></div>
+</div><!--/.row -->
+<div class="row mtop10p">
+<div class="col-xs-6"><a href="#"><b>11. Malayalam</b></a></div>
+<div class="col-xs-6"><a href="#"><b>12. Manipuri</b></a></div>
+</div><!--/.row -->
+<div class="row mtop10p">
+<div class="col-xs-6"><a href="#"><b>13. Marathi</b></a></div>
+<div class="col-xs-6"><a href="#"><b>14. Nepali</b></a></div>
+</div><!--/.row -->
+<div class="row mtop10p">
+<div class="col-xs-6"><a href="#"><b>15. Oriya</b></a></div>
+<div class="col-xs-6"><a href="#"><b>16. Punjabi</b></a></div>
+</div><!--/.row -->
+<div class="row mtop10p">
+<div class="col-xs-6"><a href="#"><b>17. Sanskrit</b></a></div>
+<div class="col-xs-6"><a href="#"><b>18. Santhali</b></a></div>
+</div><!--/.row -->
+<div class="row mtop10p">
+<div class="col-xs-12"><a href="#"><b>19. Sindhi (Devanagari/Arabic Script)</b></a></div>
+</div><!--/.row -->
+<div class="row mtop10p">
+<div class="col-xs-6"><a href="#"><b>20. Tamil</b></a></div>
+<div class="col-xs-6"><a href="#"><b>21. Telugu</b></a></div>
+</div><!--/.row -->
+<div class="row mtop10p">
+<div class="col-xs-6"><a href="#"><b>22. Urdu</b></a></div>
+</div><!--/.row -->
+</div><!--/.container-fluid -->
+<!-- -->
+</div><!--/.modal-body -->
+</div><!--/.modal-content -->
+</div><!--/.modal-dialog -->
+</div><!--/.modal -->
+<!-- Indian Languages ::: End -->
+
+<!-- Optional Subjects ::: Start -->
+<div id="optionalSubjectsModal" class="modal fade" role="dialog">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal">&times;</button>
+<h4 class="modal-title">Optional Subjects</h4>
+</div>
+<div class="modal-body">
+<!-- -->
+<div class="container-fluid">
+<div class="row">
+<div class="col-xs-12 mtop10p"><a href="#"><b>01. Agriculture</b></a></div>
+<div class="col-xs-12 mtop10p"><a href="#"><b>02. Animal Husbandry & Veterinary Science</b></a></div>
+<div class="col-xs-12 mtop10p"><a href="#"><b>03. Anthropology</b></a></div>
+<div class="col-xs-12 mtop10p"><a href="#"><b>04. Botany</b></a></div>
+<div class="col-xs-12 mtop10p"><a href="#"><b>05. Chemistry</b></a></div>
+<div class="col-xs-12 mtop10p"><a href="#"><b>06. Civil Engineering</b></a></div>
+<div class="col-xs-12 mtop10p"><a href="#"><b>07. Commerce & Accountancy</b></a></div>
+<div class="col-xs-12 mtop10p"><a href="#"><b>08. Economics</b></a></div>
+<div class="col-xs-12 mtop10p"><a href="#"><b>09. Electrical Engineering</b></a></div>
+<div class="col-xs-12 mtop10p"><a href="#"><b>10. Geography</b></a></div>
+<div class="col-xs-12 mtop10p"><a href="#"><b>11. Geology</b></a></div>
+<div class="col-xs-12 mtop10p"><a href="#"><b>12. History</b></a></div>
+<div class="col-xs-12 mtop10p"><a href="#"><b>13. Law</b></a></div>
+<div class="col-xs-12 mtop10p"><a href="#"><b>14. Management</b></a></div>
+<div class="col-xs-12 mtop10p"><a href="#"><b>15. Mathematics</b></a></div>
+<div class="col-xs-12 mtop10p"><a href="#"><b>16. Mechanical Engineering</b></a></div>
+<div class="col-xs-12 mtop10p"><a href="#"><b>17. Medical Science</b></a></div>
+<div class="col-xs-12 mtop10p"><a href="#"><b>18. Philosophy</b></a></div>
+<div class="col-xs-12 mtop10p"><a href="#"><b>19. Physics</b></a></div>
+<div class="col-xs-12 mtop10p"><a href="#"><b>20. Political Science & International Relations</b></a></div>
+<div class="col-xs-12 mtop10p"><a href="#"><b>21. Psychology</b></a></div>
+<div class="col-xs-12 mtop10p"><a href="#"><b>22. Public Administration</b></a></div>
+<div class="col-xs-12 mtop10p"><a href="#"><b>23. Sociology</b></a></div>
+<div class="col-xs-12 mtop10p"><a href="#"><b>24. Statistics</b></a></div>
+<div class="col-xs-12 mtop10p"><a href="#"><b>25. Zoology</b></a></div>
+</div><!--/.row -->
+</div><!--/.container-fluid -->
+<!-- -->
+</div><!--/.modal-body -->
+</div><!--/.modal-content -->
+</div><!--/.modal-dialog -->
+</div><!--/.modal -->
+<!-- Optional Subjects ::: End -->
+
+
+<div class="container-fluid">
+<div class="row">
+<div align="center" class="col-xs-12">
+
+<div>
+<h5><b>(Five Days Exam - Written Type)</b></h5>
+</div>
+
+<div align="right">
+<b>Exam Total Marks:</b> 1750 Marks
+</div>
+
+<div class="mtop15p">
+Main Examination is held in Five days with 9 papers.
+</div>
+
+
+<div class="table-responsive">
+<table class="table">
+<thead style="background-color:#034f84;color:#fff;">
+<tr>
+<td align="center">Day</td>
+<td align="center">
+<div>Morning Session</div>
+<div>(09:00 AM to 12:00 PM)</div>
+</td>
+<td align="center">
+<div>Afternoon Session</div>
+<div>(02:00 PM to 05:00 PM)</div>
+</td>
+</tr>
+</thead>
+<tbody style="background-color:#fff;color:#000;">
+
+<tr>
+<td>
+<div><b>Day-1</b></div>
+</td>
+<td align="center">
+<div><b>Paper-I</b></div>
+<div>(Essay)</div>
+</td>
+<td align="center">-</td>
+</tr>
+
+<tr>
+<td>
+<div><b>Day-2</b></div>
+</td>
+<td align="center">
+<div><b>Paper-II</b></div>
+<div>(General Studies - I)</div>
+</td>
+<td align="center">
+<div><b>Paper-III</b></div>
+<div>(General Studies - II)</div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div><b>Day-3</b></div>
+</td>
+<td align="center">
+<div><b>Paper-IV</b></div>
+<div>(General Studies - III)</div>
+</td>
+<td align="center">
+<div><b>Paper-V</b></div>
+<div>(General Studies - IV)</div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div><b>Day-4</b></div>
+</td>
+<td align="center">
+<div><b>Paper-A</b></div>
+<div><a data-toggle="modal" data-target="#indianLanguagesModal">(Indian Language)</a></div>
+</td>
+<td align="center">
+<div><b>Paper-B</b></div>
+<div>(English)</div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div><b>Day-5</b></div>
+</td>
+<td align="center">
+<div><b>Paper-VI</b></div>
+<div><a data-toggle="modal" data-target="#optionalSubjectsModal">(Optional Paper - I)</a></div>
+</td>
+<td align="center">
+<div><b>Paper-VII</b></div>
+<div><a data-toggle="modal" data-target="#optionalSubjectsModal">(Optional Paper - II)</a></div>
+</td>
+</tr>
+
+</tbody>
+</table>
+</div><!--/.table-responsive -->
+<!-- -->
+
+<div>
+<div align="center" class="mbot15p"><b>EXAM SYLLABUS</b></div>
+</div>
+
+</div><!--/.col-xs-12 -->
+</div><!--/.row -->
+</div><!--/.container-fluid -->
+<!-- -->
+</div><!--/#mains -->
+
+
+<div id="interview" class="tab-pane fade">
+<!-- -->
+<div class="list-group mbot0p">
+<div align="center" class="list-group-item" style="background-color:#d64161;border:1px solid #d64161;color:#fff;">
+<b>Interview</b>
+</div><!--/.list-group-item -->
+</div><!--/.list-group -->
+<!-- -->
+<!-- -->
+<div class="container-fluid">
+<div class="row">
+<div align="center" class="col-xs-12">
+<h5><b>(One day Interview - Oral Type)</b></h5>
+</div><!--/.col-xs-12 -->
+</div><!--/.row -->
+</div><!--/.container-fluid -->
+<!-- -->
+</div><!--/#interview -->
+
+</div><!--/.tab-content -->
+
+
+	 
+	 <!-- About UPSC Exam Content ::: End -->
+	</div>
+</div>  
+ <!-- -->
+ </div>
+ <div class="col-md-4 col-sm-3"></div>
+ </div>
+ 
+</body>
+</html>

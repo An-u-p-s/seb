@@ -19,45 +19,56 @@
 <!-- Page Related CSS ::: Start -->
 <style>
 a,a:focus,a:hover{ color:#e93d0d; }
-ul.nav-tabs>li.active>a, ul.nav-tabs>li.active>a:focus, ul.nav-tabs>li.active>a:hover { border:2px solid #fc0f0f;background-color:#fc0f0f;color:#fff; }
+.btn-orange-o { border:2px solid #fc0f0f;color:#fc0f0f;background-color:#fff; }
 </style>
 <!-- Page Related CSS ::: Start -->
 <script type="text/javascript">
-$(document).ready(function(){
- authRegister_formDisplay_form1();
-});
-function authRegister_formDisplay_view(id){
- var ids=["user-auth-register-form01", "user-auth-register-form02", "user-auth-register-form03"];
- for(var index=0;index<ids.length;index++){
-   if(ids[index]===id && $('#'+ids[index]).hasClass('hide-block')){ $('#'+ids[index]).removeClass('hide-block'); }
-   else {
-      $('#'+ids[index]).addClass('hide-block');
-   }
- }
-}
 
-function authRegister_formDisplay_form1(){ authRegister_formDisplay_view('user-auth-register-form01'); }
-function authRegister_formDisplay_form2(){ authRegister_formDisplay_view('user-auth-register-form02'); }
-function authRegister_formDisplay_form3(){ authRegister_formDisplay_view('user-auth-register-form03'); }
 </script>
 </head>
 <body>
-<div align="center" class="container-fluid mtop15p">
-  <img src="images/logo.jpg" class="app-icon-s3"/>
-</div>
+  <div align="center" class="container-fluid mtop15p">
+    <img src="images/logo.jpg" class="app-icon-s3"/>
+  </div>
 
   <div class="container-fluid mtop50p">
    <div class="row">
-    <div class="col-xs-12">
-	  <ul class="nav nav-tabs">
-		<li class="active"><a data-toggle="tab" href="#user-auth-register"><b>Register</b></a></li>
-		<li><a href="#user-auth-login"  data-toggle="tab"><b>Login</b></a></li>
-	  </ul>
-	  <div class="list-group">
-		<div class="list-group-item tab-content" style="border-radius:0px;border:2px solid #fc0f0f;">
-	      <div id="user-auth-register" class="tab-pane fade in active">
+    <div class="col-sm-4 col-md-4 col-xs-12"></div>
+    <div class="col-sm-4 col-md-4 col-xs-12">
+	  <div style="color:#000;padding:8px;border-bottom:1px solid #ccc;"><b>Login to your Account</b></div>
+	  <div class="list-group mtop15p">
+		<div class="list-group-item">
+		  <div id="user-auth-login">
+		    <!-- -->
+			<div class="form-group mtop15p">
+			 <label>Email Address</label>
+			 <input type="text" class="form-control" placeholder="Enter your Email Address"/>
+			</div><!--/.form-group -->
+			
+			<div class="form-group">
+			 <label>Account Password</label>
+			 <input type="password" class="form-control" placeholder="Enter your Account Password"/>
+			</div><!--/.form-group -->
+			
+			<div class="form-group">
+			 <a href="app-auth-upsc-plan.html">
+			   <button class="btn form-control bg-red"><b>Sign In</b></button>
+			 </a>
+			</div><!--/.form-group -->
+			<!-- -->
+		  </div><!--/.user-auth-login -->
+		</div><!--/.list-group-item -->
+	  </div><!--/.list-group -->
+	  
+	  <div align="right"><b>Forgot Password?</b></div>
+	  <div align="right" class="mtop15p"><button class="btn btn-orange-o"><b>Register your Account</b></button></div>
+	  <!-- -->
+	  <div class="list-group hide-block">
+	   <div class="list-group-item">
+	   <!-- -->
+	    <div id="user-auth-register">
 		  
-			<div id="user-auth-register-form01" class="hide-block">
+			<div id="user-auth-register-form01">
 		    <!-- -->
 			<div class="form-group mtop15p">
 			 <label>Name</label>
@@ -115,32 +126,19 @@ function authRegister_formDisplay_form3(){ authRegister_formDisplay_view('user-a
 			</div>
 			<!-- -->
 		  </div><!--/.user-auth-register -->
-		  <div id="user-auth-login" class="tab-pane fade">
-		    <!-- -->
-			<div class="form-group mtop15p">
-			 <label>Email Address</label>
-			 <input type="text" class="form-control" placeholder="Enter your Email Address"/>
-			</div><!--/.form-group -->
-			
-			<div class="form-group">
-			 <label>Account Password</label>
-			 <input type="password" class="form-control" placeholder="Enter your Account Password"/>
-			</div><!--/.form-group -->
-			
-			<div class="form-group">
-			 <a href="upsc-app-plan.html">
-			   <button class="btn form-control bg-red"><b>Sign In</b></button>
-			 </a>
-			</div><!--/.form-group -->
-			<!-- -->
-		  </div><!--/.user-auth-register -->
-		</div><!--/.list-group-item -->
+		  
+	   <!-- -->
+	   </div><!--/.list-group-item -->
 	  </div><!--/.list-group -->
+	  
 	</div><!--/.col-xs-12 -->
+    <div class="col-sm-4 col-md-4 col-xs-12"></div>
    </div><!--/.row -->
   </div><!--/.container-fluid -->
+  <!--
   <a href="http://192.168.1.4/upn/android-ws/dbTrack.html">
     <button>Database Track</button>
   </a>
+  -->
 </body>
 </html>
