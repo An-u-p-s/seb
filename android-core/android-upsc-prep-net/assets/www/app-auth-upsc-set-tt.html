@@ -54,10 +54,13 @@ function calculateTotalHours(){
  else { total = hr+' Hours'; }
  document.getElementById("displaySpendTime").innerHTML = total;
 }
+function saveTimeSchedule(){
+ window.location='app-user-aboutUpscExam.html';
+}
 </script>
 </head>
 <body>
-<div align="center" class="container-fluid mtop5p mbot5p">
+<div align="center" class="container-fluid mtop15p">
   <img src="images/logo.jpg" class="app-icon-s3"/>
 </div>
 
@@ -148,9 +151,7 @@ for the course in a day</b></div>
 <div class="col-xs-3"></div>
 <div align="center" class="col-xs-6">
 <!-- -->
-<a href="app-user-home.html">
 <button class="btn btn-orange-o form-control mbot15p" onclick="javascript:saveTimeSchedule();"><b>Save</b></button>
-</a>
 <!-- -->
 </div><!--/.col-xs-6 -->
 <div class="col-xs-3"></div>
